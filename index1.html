@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sea &amp; Stone Estates | Didim — Real Estate in Didim, Türkiye</title>
+<meta name="description" content="Didim ve Altınkum'da satılık ve kiralık gayrimenkul. Property for sale in Didim, Turkey. Immobilien in Didim, Türkei.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#12303F;      /* Ege gece mavisi */
+  --sea:#176B7A;       /* deniz turkuazı */
+  --sun:#D9A441;       /* Altınkum altını */
+  --shell:#F3F7F7;     /* açık deniz köpüğü */
+  --stone:#6E7F86;     /* taş grisi */
+  --white:#FFFFFF;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;color:var(--deep);background:var(--shell);line-height:1.65}
+h1,h2,h3,.display{font-family:'Marcellus',serif;font-weight:400;letter-spacing:.01em}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(243,247,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(18,48,63,.08)}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:24px;padding:14px 24px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:50%;background:var(--deep);color:var(--sun);display:grid;place-items:center;font-family:'Marcellus',serif;font-size:16px}
+.logo-text{font-family:'Marcellus',serif;font-size:19px}
+.logo-text small{display:block;font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sea)}
+nav.menu{margin-left:auto;display:flex;gap:22px;font-size:14.5px;font-weight:600}
+nav.menu a{text-decoration:none;color:var(--deep);opacity:.8;transition:opacity .2s}
+nav.menu a:hover{opacity:1}
+.lang{display:flex;gap:2px;border:1px solid rgba(18,48,63,.2);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;font:600 12.5px 'Manrope',sans-serif;padding:5px 11px;border-radius:999px;cursor:pointer;color:var(--deep)}
+.lang button.active{background:var(--deep);color:var(--white)}
+@media(max-width:760px){nav.menu{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{max-width:1100px;margin:0 auto;padding:72px 24px 56px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sea);margin-bottom:16px}
+.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.12;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--sea)}
+.hero p{font-size:17px;color:var(--stone);max-width:46ch;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--sun);color:var(--deep)}
+.btn-line{border:1.5px solid var(--deep);color:var(--deep)}
+.hero-art{position:relative}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-art{max-width:420px;margin:0 auto}}
+
+/* ---------- Column divider (Apollon imzası) ---------- */
+.columns-divider{display:flex;justify-content:center;gap:26px;padding:8px 0 0}
+.columns-divider span{width:3px;height:34px;background:linear-gradient(var(--sea),transparent);border-radius:2px;opacity:.45}
+
+/* ---------- Sections ---------- */
+section{max-width:1100px;margin:0 auto;padding:64px 24px}
+.sec-head{max-width:60ch;margin-bottom:36px}
+.sec-head h2{font-size:clamp(26px,3.4vw,36px);margin:8px 0 12px}
+.sec-head p{color:var(--stone)}
+
+/* Neden Didim */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.why article{background:var(--white);border-radius:var(--radius);padding:28px 24px;border:1px solid rgba(18,48,63,.06)}
+.why h3{font-size:20px;margin:14px 0 8px}
+.why p{font-size:14.5px;color:var(--stone)}
+.why .glyph{width:44px;height:44px;border-radius:12px;background:var(--shell);display:grid;place-items:center;color:var(--sea)}
+@media(max-width:760px){.why{grid-template-columns:1fr}}
+
+/* Portföy */
+.props{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prop{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(18,48,63,.06);display:flex;flex-direction:column}
+.prop .photo{height:190px;display:grid;place-items:end start;padding:14px;color:var(--white);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.photo-1{background:linear-gradient(160deg,#176B7A,#12303F)}
+.photo-2{background:linear-gradient(160deg,#D9A441,#B07E22)}
+.photo-3{background:linear-gradient(160deg,#4E8898,#176B7A)}
+.prop .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prop h3{font-size:19px}
+.prop .meta{font-size:13.5px;color:var(--stone)}
+.prop .price{margin-top:auto;font-family:'Marcellus',serif;font-size:22px;color:var(--sea)}
+.tag{display:inline-block;background:rgba(217,164,65,.15);color:#8a6414;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase;align-self:flex-start}
+@media(max-width:860px){.props{grid-template-columns:1fr}}
+
+/* Rehber */
+.guide{background:var(--deep);color:var(--white);border-radius:20px;padding:52px 44px}
+.guide .sec-head p{color:#B9CBD1}
+.guide h2{color:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:12px}
+.step .num{font-family:'Marcellus',serif;font-size:30px;color:var(--sun)}
+.step h3{font-size:16.5px;margin:8px 0 6px}
+.step p{font-size:13.5px;color:#B9CBD1}
+@media(max-width:860px){.steps{grid-template-columns:repeat(2,1fr)}.guide{padding:40px 28px}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* Hakkında */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.about .portrait{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(170deg,#e8eef0,#cfdde1);display:grid;place-items:center;color:var(--stone);font-size:14px;border:1px solid rgba(18,48,63,.08)}
+.about p{color:var(--stone);margin-bottom:14px}
+@media(max-width:760px){.about{grid-template-columns:1fr}.about .portrait{max-width:340px}}
+
+/* İletişim */
+.contact{background:var(--white);border-radius:20px;border:1px solid rgba(18,48,63,.06);padding:48px 44px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact ul{list-style:none;margin-top:18px;display:grid;gap:12px;font-size:15px}
+.contact li strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
+.wa{display:inline-flex;align-items:center;gap:10px;background:#1FA855;color:#fff;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;margin-top:20px}
+@media(max-width:760px){.contact{grid-template-columns:1fr;padding:36px 26px}}
+
+footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#top" aria-label="Sea &amp; Stone Estates">
+      <span class="logo-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="14"/><line x1="16" y1="4" x2="16" y2="14"/><rect x="5" y="2" width="14" height="2.5" rx="1" fill="currentColor" stroke="none"/><path d="M3 19q3-2.5 6 0t6 0 6 0" /></svg></span>
+      <span class="logo-text">Sea &amp; Stone<small data-i18n="brandSub">Estates · Didim</small></span>
+    </a>
+    <nav class="menu" aria-label="Site">
+      <a href="#portfoy" data-i18n="navPortfolio">Portföy</a>
+      <a href="#rehber" data-i18n="navGuide">Alıcı Rehberi</a>
+      <a href="#hakkinda" data-i18n="navAbout">Hakkında</a>
+      <a href="#iletisim" data-i18n="navContact">İletişim</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Dil / Language">
+      <button class="active" data-lang="tr">TR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="de">DE</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div>
+      <p class="eyebrow" data-i18n="heroEyebrow">Didim · Altınkum · Akbük</p>
+      <h1 data-i18n-html="heroTitle">Ege'nin altın kıyısında <em>evinizi bulun</em></h1>
+      <p data-i18n="heroText">Didim'de doğup büyüyen bir danışmanla; satılık villa, daire ve yatırımlık arsa portföyü. Yabancı alıcılar için tapudan anahtar teslimine kadar tam destek.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="#portfoy" data-i18n="ctaPortfolio">Portföyü İncele</a>
+        <a class="btn btn-line" href="#iletisim" data-i18n="ctaContact">Bize Ulaşın</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <!-- Apollon Tapınağı + güneş: Didim'in imzası -->
+      <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg" role="img">
+        <circle cx="210" cy="140" r="86" fill="#D9A441" opacity=".9"/>
+        <g stroke="#12303F" stroke-width="10" stroke-linecap="round">
+          <line x1="120" y1="150" x2="120" y2="300"/>
+          <line x1="180" y1="130" x2="180" y2="300"/>
+          <line x1="240" y1="130" x2="240" y2="300"/>
+          <line x1="300" y1="150" x2="300" y2="300"/>
+        </g>
+        <rect x="96" y="96" width="228" height="18" rx="9" fill="#12303F"/>
+        <path d="M60 320 Q140 300 210 320 T360 320" fill="none" stroke="#176B7A" stroke-width="8" stroke-linecap="round"/>
+        <path d="M80 344 Q150 328 210 344 T340 344" fill="none" stroke="#176B7A" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="columns-divider" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+
+  <section id="neden">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="whyEyebrow">Neden Didim?</p>
+      <h2 data-i18n="whyTitle">Güneş, deniz ve değer kazanan bir kıyı</h2>
+    </div>
+    <div class="why">
+      <article>
+        <div class="glyph"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></div>
+        <h3 data-i18n="why1Title">Yılda 300+ güneşli gün</h3>
+        <p data-i18n="why1Text">Altınkum'un sığ, altın sarısı plajı ve ılıman iklimi; Didim'i hem tatil hem emeklilik için Ege'nin en çok tercih edilen kıyılarından biri yapıyor.</p>
+      </article>
+      <article>
+        <div class="glyph"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <h3 data-i18n="why2Title">Uluslararası bir topluluk</h3>
+        <p data-i18n="why2Text">Binlerce İngiliz ve Avrupalı ev sahibiyle Didim, yabancı alıcıların kendini evinde hissettiği köklü bir uluslararası topluluğa sahip.</p>
+      </article>
+      <article>
+        <div class="glyph"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3 data-i18n="why3Title">Güçlü yatırım potansiyeli</h3>
+        <p data-i18n="why3Text">Marina, Apollon Tapınağı ve büyüyen turizmiyle Didim'de gayrimenkul, hem yazlık keyfi hem kira geliri sunan bir yatırım.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="portfoy">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="propEyebrow">Portföy</p>
+      <h2 data-i18n="propTitle">Öne çıkan ilanlar</h2>
+      <p data-i18n="propSub">Örnek ilanlardır; gerçek portföy fotoğrafları ve drone videolarıyla güncellenecektir.</p>
+    </div>
+    <div class="props">
+      <article class="prop">
+        <div class="photo photo-1"><span data-i18n="prop1Badge">Deniz Manzaralı</span></div>
+        <div class="body">
+          <span class="tag" data-i18n="tagSale">Satılık</span>
+          <h3 data-i18n="prop1Title">Altınkum'da 3+1 Villa</h3>
+          <p class="meta" data-i18n="prop1Meta">Özel havuz · 180 m² · Plaja 600 m</p>
+          <p class="price">€ 245.000</p>
+        </div>
+      </article>
+      <article class="prop">
+        <div class="photo photo-2"><span data-i18n="prop2Badge">Yeni İlan</span></div>
+        <div class="body">
+          <span class="tag" data-i18n="tagSale">Satılık</span>
+          <h3 data-i18n="prop2Title">Efeler'de 2+1 Daire</h3>
+          <p class="meta" data-i18n="prop2Meta">Site içi · Ortak havuz · 95 m²</p>
+          <p class="price">€ 98.000</p>
+        </div>
+      </article>
+      <article class="prop">
+        <div class="photo photo-3"><span data-i18n="prop3Badge">Yatırımlık</span></div>
+        <div class="body">
+          <span class="tag" data-i18n="tagLand">Arsa</span>
+          <h3 data-i18n="prop3Title">Akbük'te İmarlı Arsa</h3>
+          <p class="meta" data-i18n="prop3Meta">520 m² · Denize 1,2 km · Villa imarlı</p>
+          <p class="price">€ 120.000</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="rehber">
+    <div class="guide">
+      <div class="sec-head">
+        <p class="eyebrow" style="color:var(--sun)" data-i18n="guideEyebrow">Yabancı Alıcı Rehberi</p>
+        <h2 data-i18n="guideTitle">Türkiye'de ev almak 4 adımda</h2>
+        <p data-i18n="guideSub">İngiltere ve Almanya'dan gelen alıcılarımıza tüm süreçte kendi dillerinde eşlik ediyoruz.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">I</div><h3 data-i18n="step1Title">Keşif &amp; Sanal Tur</h3><p data-i18n="step1Text">Video görüşme ve drone çekimleriyle evleri uzaktan gezin, kısa listenizi oluşturun.</p></div>
+        <div class="step"><div class="num">II</div><h3 data-i18n="step2Title">Vergi No &amp; Banka</h3><p data-i18n="step2Text">Türk vergi numaranızı alın ve banka hesabınızı açın; tüm işlemlerde yanınızdayız.</p></div>
+        <div class="step"><div class="num">III</div><h3 data-i18n="step3Title">Tapu Devri</h3><p data-i18n="step3Text">Resmi değerleme ve tapu dairesi randevusuyla mülkiyet güvenle adınıza geçer.</p></div>
+        <div class="step"><div class="num">IV</div><h3 data-i18n="step4Title">Anahtar Teslim</h3><p data-i18n="step4Text">Abonelikler, sigorta ve dilerseniz kiralama yönetimi; taşınmaya hazır bir ev.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hakkinda">
+    <div class="about">
+      <div class="portrait" data-i18n="portraitPh">Mine Gürtuna — fotoğraf eklenecek</div>
+      <div>
+        <p class="eyebrow" data-i18n="aboutEyebrow">Hakkında</p>
+        <h2 style="margin-bottom:16px" data-i18n="aboutTitle">Didim'i bilen bir danışman</h2>
+        <p data-i18n="aboutP1">Mine Gürtuna, sorumlu emlak danışmanlığı yetki belgesine sahip, Aydın Didim merkezli bir gayrimenkul danışmanıdır. Bölgeyi mahalle mahalle tanır; her alıcının bütçesine ve hayaline uygun doğru evi bulmayı ilke edinir.</p>
+        <p data-i18n="aboutP2">Portföyündeki her mülk yerinde incelenir, dürüst şekilde fiyatlanır ve profesyonel fotoğraf ile drone videosuyla sunulur. Yabancı alıcılar için tapu, vergi ve abonelik süreçlerinde uçtan uca destek verir.</p>
+        <p data-i18n="aboutP3">Adımız Didim'in iki yüzünden geliyor: masmavi Ege denizi ve Apollon Tapınağı'nın binlerce yıllık taşları. Deniz ve taş — huzur ve kalıcılık.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <div class="contact">
+      <div>
+        <p class="eyebrow" data-i18n="contactEyebrow">İletişim</p>
+        <h2 data-i18n="contactTitle">Hayalinizdeki evi konuşalım</h2>
+        <p style="color:var(--stone);margin-top:10px" data-i18n="contactSub">WhatsApp üzerinden Türkçe ve İngilizce hızlı yanıt veriyoruz.</p>
+        <a class="wa" href="https://wa.me/905432511538" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.9-5.2c-.4-.7-.8-1.6-.8-2.4 0-.9.5-1.4.7-1.6.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.2.4.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l.7-.9c.2-.3.4-.2.7-.1l1.9.9c.3.2.5.2.5.4 0 .1 0 .6-.2 1Z"/></svg>
+          <span data-i18n="waBtn">WhatsApp'tan Yazın</span>
+        </a>
+      </div>
+      <div>
+        <ul>
+          <li><strong data-i18n="lblPhone">Telefon</strong> <a href="tel:+905432511538" style="text-decoration:none">+90 543 251 15 38</a></li>
+          <li><strong data-i18n="lblMail">E-posta</strong> <a href="mailto:mine@seaandstoneestates.com" style="text-decoration:none">mine@seaandstoneestates.com</a></li>
+          <li><strong data-i18n="lblAddr">Ofis</strong> <span data-i18n="addrVal">Didim / Aydın, Türkiye</span></li>
+          <li><strong>Instagram</strong> <a href="https://instagram.com/mine.gurtuna" target="_blank" rel="noopener" style="text-decoration:none">@mine.gurtuna</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="columns-divider" aria-hidden="true" style="margin-bottom:18px"><span></span><span></span><span></span></div>
+  <span data-i18n="footer">© 2026 Sea &amp; Stone Estates · Didim, Aydın · Sorumlu Emlak Danışmanlığı Yetki Belgeli</span>
+</footer>
+
+<script>
+const i18n = {
+  tr: {}, // Türkçe metinler HTML'de varsayılan olarak duruyor
+  en: {
+    brandSub:"Estates · Didim", navPortfolio:"Portfolio", navGuide:"Buyer's Guide", navAbout:"About", navContact:"Contact",
+    heroEyebrow:"Didim · Altınkum · Akbük",
+    heroTitle:"Find your home on the <em>golden Aegean coast</em>",
+    heroText:"Villas, apartments and investment land in Didim — with a consultant who knows every street. Full support for international buyers, from title deed to key handover.",
+    ctaPortfolio:"View Portfolio", ctaContact:"Get in Touch",
+    whyEyebrow:"Why Didim?", whyTitle:"Sunshine, sea and a coast that keeps growing",
+    why1Title:"300+ sunny days a year", why1Text:"Altınkum's shallow golden beach and mild climate make Didim one of the Aegean's favourite spots for holidays and retirement alike.",
+    why2Title:"An international community", why2Text:"Home to thousands of British and European owners, Didim has a well-established expat community where you'll instantly feel at home.",
+    why3Title:"Strong investment potential", why3Text:"With its marina, the Temple of Apollo and growing tourism, property in Didim offers both lifestyle and rental income.",
+    propEyebrow:"Portfolio", propTitle:"Featured listings", propSub:"Sample listings — real photos and drone videos coming soon.",
+    prop1Badge:"Sea View", prop2Badge:"New Listing", prop3Badge:"Investment",
+    tagSale:"For Sale", tagLand:"Land",
+    prop1Title:"3-Bed Villa in Altınkum", prop1Meta:"Private pool · 180 m² · 600 m to beach",
+    prop2Title:"2-Bed Apartment in Efeler", prop2Meta:"Gated complex · Shared pool · 95 m²",
+    prop3Title:"Building Plot in Akbük", prop3Meta:"520 m² · 1.2 km to sea · Villa zoning",
+    guideEyebrow:"International Buyer's Guide", guideTitle:"Buying a home in Türkiye in 4 steps",
+    guideSub:"We guide buyers from the UK and Germany through the whole process, in your own language.",
+    step1Title:"Discovery & Virtual Tour", step1Text:"Tour homes remotely via video calls and drone footage, and build your shortlist.",
+    step2Title:"Tax Number & Bank", step2Text:"Get your Turkish tax number and open a bank account — we handle it with you.",
+    step3Title:"Title Deed Transfer", step3Text:"With an official valuation and land registry appointment, ownership passes safely to you.",
+    step4Title:"Key Handover", step4Text:"Utilities, insurance and optional rental management — a home that's ready to move into.",
+    aboutEyebrow:"About", aboutTitle:"A consultant who truly knows Didim",
+    aboutP1:"Mine Gürtuna is a licensed real estate consultant based in Didim, Aydın. She knows the area street by street and is committed to finding the right home for every buyer's budget and dream.",
+    aboutP2:"Every property in her portfolio is inspected in person, priced honestly and presented with professional photos and drone video. International buyers receive end-to-end support with deeds, tax and utilities.",
+    aboutP3:"Our name comes from the two faces of Didim: the deep blue Aegean sea and the ancient stones of the Temple of Apollo. Sea and stone — serenity and permanence.",
+    portraitPh:"Mine Gürtuna — photo coming soon",
+    contactEyebrow:"Contact", contactTitle:"Let's talk about your dream home",
+    contactSub:"Quick replies on WhatsApp in English and Turkish.",
+    waBtn:"Message on WhatsApp", lblPhone:"Phone", lblMail:"Email", lblAddr:"Office", addrVal:"Didim / Aydın, Türkiye",
+    footer:"© 2026 Sea & Stone Estates · Didim, Aydın · Licensed Real Estate Consultant"
+  },
+  de: {
+    brandSub:"Estates · Didim", navPortfolio:"Angebote", navGuide:"Käufer-Guide", navAbout:"Über uns", navContact:"Kontakt",
+    heroEyebrow:"Didim · Altınkum · Akbük",
+    heroTitle:"Finden Sie Ihr Zuhause an der <em>goldenen Ägäisküste</em>",
+    heroText:"Villen, Wohnungen und Grundstücke in Didim — mit einer Beraterin, die jede Straße kennt. Volle Unterstützung für internationale Käufer, vom Grundbuch bis zur Schlüsselübergabe.",
+    ctaPortfolio:"Angebote ansehen", ctaContact:"Kontakt aufnehmen",
+    whyEyebrow:"Warum Didim?", whyTitle:"Sonne, Meer und eine wachsende Küste",
+    why1Title:"300+ Sonnentage im Jahr", why1Text:"Der flache, goldene Strand von Altınkum und das milde Klima machen Didim zu einem der beliebtesten Orte der Ägäis — für Urlaub und Ruhestand.",
+    why2Title:"Eine internationale Gemeinschaft", why2Text:"Tausende britische und europäische Eigentümer leben bereits in Didim — eine etablierte Community, in der man sich sofort zuhause fühlt.",
+    why3Title:"Starkes Investitionspotenzial", why3Text:"Mit Marina, Apollon-Tempel und wachsendem Tourismus bietet eine Immobilie in Didim Lebensqualität und Mieteinnahmen zugleich.",
+    propEyebrow:"Angebote", propTitle:"Ausgewählte Immobilien", propSub:"Beispielangebote — echte Fotos und Drohnenvideos folgen in Kürze.",
+    prop1Badge:"Meerblick", prop2Badge:"Neu", prop3Badge:"Investment",
+    tagSale:"Zu verkaufen", tagLand:"Grundstück",
+    prop1Title:"Villa mit 3 Schlafzimmern in Altınkum", prop1Meta:"Privater Pool · 180 m² · 600 m zum Strand",
+    prop2Title:"2-Zimmer-Wohnung in Efeler", prop2Meta:"Wohnanlage · Gemeinschaftspool · 95 m²",
+    prop3Title:"Baugrundstück in Akbük", prop3Meta:"520 m² · 1,2 km zum Meer · Villenbebauung",
+    guideEyebrow:"Guide für internationale Käufer", guideTitle:"In 4 Schritten zum Haus in der Türkei",
+    guideSub:"Wir begleiten Käufer aus Deutschland und Großbritannien durch den gesamten Prozess — in Ihrer Sprache.",
+    step1Title:"Besichtigung & virtuelle Tour", step1Text:"Besichtigen Sie Häuser per Videoanruf und Drohnenaufnahmen und erstellen Sie Ihre Auswahl.",
+    step2Title:"Steuernummer & Bank", step2Text:"Türkische Steuernummer beantragen und Bankkonto eröffnen — wir erledigen es gemeinsam.",
+    step3Title:"Grundbucheintrag", step3Text:"Mit offizieller Bewertung und Grundbuchtermin geht das Eigentum sicher auf Sie über.",
+    step4Title:"Schlüsselübergabe", step4Text:"Anschlüsse, Versicherung und optionale Vermietungsverwaltung — ein bezugsfertiges Zuhause.",
+    aboutEyebrow:"Über uns", aboutTitle:"Eine Beraterin, die Didim wirklich kennt",
+    aboutP1:"Mine Gürtuna ist lizenzierte Immobilienberaterin mit Sitz in Didim, Aydın. Sie kennt die Region Straße für Straße und findet für jedes Budget das passende Zuhause.",
+    aboutP2:"Jede Immobilie im Portfolio wird persönlich geprüft, ehrlich bewertet und mit professionellen Fotos und Drohnenvideo präsentiert. Internationale Käufer erhalten Rundum-Unterstützung bei Grundbuch, Steuern und Anschlüssen.",
+    aboutP3:"Unser Name stammt von den zwei Gesichtern Didims: dem tiefblauen Ägäischen Meer und den jahrtausendealten Steinen des Apollon-Tempels. Meer und Stein — Ruhe und Beständigkeit.",
+    portraitPh:"Mine Gürtuna — Foto folgt",
+    contactEyebrow:"Kontakt", contactTitle:"Sprechen wir über Ihr Traumhaus",
+    contactSub:"Schnelle Antworten per WhatsApp auf Deutsch und Englisch.",
+    waBtn:"Per WhatsApp schreiben", lblPhone:"Telefon", lblMail:"E-Mail", lblAddr:"Büro", addrVal:"Didim / Aydın, Türkei",
+    footer:"© 2026 Sea & Stone Estates · Didim, Aydın · Lizenzierte Immobilienberaterin"
+  }
+};
+
+// Türkçe varsayılan metinleri sakla (geri dönebilmek için)
+const trDefaults = {};
+document.querySelectorAll('[data-i18n],[data-i18n-html]').forEach(el=>{
+  const key = el.dataset.i18n || el.dataset.i18nHtml;
+  trDefaults[key] = el.dataset.i18nHtml !== undefined ? el.innerHTML : el.textContent;
+});
+
+function setLang(lang){
+  const dict = lang === 'tr' ? trDefaults : {...trDefaults, ...i18n[lang]};
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const t = dict[el.dataset.i18n]; if(t) el.textContent = t;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const t = dict[el.dataset.i18nHtml]; if(t) el.innerHTML = t;
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>
