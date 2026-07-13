@@ -6,6 +6,7 @@
 <title>Sea &amp; Stone Estates | Didim — Real Estate in Didim, Türkiye</title>
 <meta name="description" content="Didim ve Altınkum'da satılık ve kiralık gayrimenkul. Property for sale in Didim, Turkey. Immobilien in Didim, Türkei.">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -95,6 +96,22 @@ section{max-width:1100px;margin:0 auto;padding:64px 24px}
 .src-note{font-size:12px;color:var(--stone);margin-top:18px;opacity:.8}
 @media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
 
+/* Grafikler */
+.charts{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:26px}
+.chart-card{background:var(--white);border-radius:var(--radius);border:1px solid rgba(18,48,63,.06);padding:24px}
+.chart-card h3{font-size:18px;margin-bottom:14px}
+.badge-gold{display:inline-block;background:rgba(217,164,65,.18);color:#8a6414;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;margin-bottom:10px}
+.legend{list-style:none;display:grid;gap:8px;font-size:13.5px;color:var(--stone);margin-top:14px}
+.legend li{display:flex;align-items:center;gap:8px}
+.legend .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+@media(max-width:860px){.charts{grid-template-columns:1fr}}
+
+/* Harita */
+#map{height:440px;border-radius:var(--radius);border:1px solid rgba(18,48,63,.1);z-index:1}
+.price-pin{background:var(--deep);color:#fff;font:700 12.5px 'Manrope',sans-serif;padding:5px 10px;border-radius:999px;border:2px solid #fff;box-shadow:0 2px 8px rgba(18,48,63,.35);white-space:nowrap}
+.leaflet-popup-content{font-family:'Manrope',sans-serif;font-size:13.5px}
+.leaflet-popup-content a{color:var(--sea);font-weight:700}
+
 /* Rehber */
 .guide{background:var(--deep);color:var(--white);border-radius:20px;padding:52px 44px}
 .guide .sec-head p{color:#B9CBD1}
@@ -107,8 +124,9 @@ section{max-width:1100px;margin:0 auto;padding:64px 24px}
 @media(max-width:560px){.steps{grid-template-columns:1fr}}
 
 /* Hakkında */
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
-.about .portrait{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(170deg,#e8eef0,#cfdde1);display:grid;place-items:center;color:var(--stone);font-size:14px;border:1px solid rgba(18,48,63,.08)}
+.about{display:grid;grid-template-columns:.62fr 1.38fr;gap:44px;align-items:center}
+.about .portrait{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(170deg,#e8eef0,#cfdde1);display:grid;place-items:center;color:var(--stone);font-size:14px;border:1px solid rgba(18,48,63,.08);max-width:300px;width:100%}
+img.portrait{object-fit:cover;display:block}
 .about p{color:var(--stone);margin-bottom:14px}
 @media(max-width:760px){.about{grid-template-columns:1fr}.about .portrait{max-width:340px}}
 
@@ -127,7 +145,7 @@ footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone
 <header>
   <div class="nav">
     <a class="logo" href="#top" aria-label="Sea &amp; Stone Estates">
-      <img src="logo.png" alt="Sea &amp; Stone Estates logosu" style="width:42px;height:42px;border-radius:50%;box-shadow:0 1px 4px rgba(18,48,63,.15)">
+      <img src="logo.png" alt="Sea &amp; Stone Estates logosu" style="width:58px;height:58px;border-radius:50%;box-shadow:0 2px 8px rgba(18,48,63,.18)">
       <span class="logo-text">Sea &amp; Stone<small data-i18n="brandSub">Estates · Didim</small></span>
     </a>
     <nav class="menu" aria-label="Site">
@@ -211,6 +229,46 @@ footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone
       <div class="stat"><div class="num">300+</div><p data-i18n="stat4">Yılda güneşli gün — kiralık talebinin motoru</p></div>
     </div>
     <p class="src-note" data-i18n="statsSrc">Kaynak: Emlakjet/Endeksa bölge verileri, Temmuz 2026. Değerler ortalamadır, ilana göre değişir.</p>
+    <div class="charts">
+      <div class="chart-card">
+        <span class="badge-gold" data-i18n="chartBadge">Son 5 yılda +%1110 (nominal)</span>
+        <h3 data-i18n="chartTitle">Didim ortalama m² satış fiyatı (₺)</h3>
+        <svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Didim m2 fiyat trendi" style="width:100%;height:auto">
+          <g stroke="rgba(18,48,63,.12)" stroke-width="1">
+            <line x1="40" y1="230" x2="580" y2="230"/><line x1="40" y1="170" x2="580" y2="170"/><line x1="40" y1="110" x2="580" y2="110"/><line x1="40" y1="50" x2="580" y2="50"/>
+          </g>
+          <g font-family="Manrope,sans-serif" font-size="11" fill="#6E7F86">
+            <text x="6" y="234">0</text><text x="6" y="174">20b</text><text x="6" y="114">40b</text><text x="6" y="54">60b</text>
+            <text x="40" y="252">2021</text><text x="180" y="252">2023</text><text x="410" y="252">2025</text><text x="548" y="252">2026</text>
+          </g>
+          <path d="M40,215 L113,200 L192,170 L271,137 L349,104 L428,86 L507,65 L580,41 L580,230 L40,230 Z" fill="rgba(23,107,122,.12)"/>
+          <path d="M40,215 L113,200 L192,170 L271,137 L349,104 L428,86 L507,65 L580,41" fill="none" stroke="#176B7A" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="580" cy="41" r="5" fill="#D9A441"/>
+          <text x="500" y="30" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="#12303F">~63.000 ₺/m²</text>
+        </svg>
+      </div>
+      <div class="chart-card">
+        <h3 data-i18n="donutTitle">Satılık konut stok dağılımı</h3>
+        <svg viewBox="0 0 200 200" style="width:100%;max-width:230px;display:block;margin:0 auto" role="img" aria-label="Konut stok dağılımı">
+          <g transform="rotate(-90 100 100)">
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#176B7A" stroke-width="30" stroke-dasharray="184.7 439.8" stroke-dashoffset="0"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#D9A441" stroke-width="30" stroke-dasharray="136.3 439.8" stroke-dashoffset="-184.7"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#12303F" stroke-width="30" stroke-dasharray="52.8 439.8" stroke-dashoffset="-321"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#4E8898" stroke-width="30" stroke-dasharray="48.4 439.8" stroke-dashoffset="-373.8"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#B9CBD1" stroke-width="30" stroke-dasharray="17.6 439.8" stroke-dashoffset="-422.2"/>
+          </g>
+          <text x="100" y="96" text-anchor="middle" font-family="Marcellus,serif" font-size="26" fill="#12303F">536</text>
+          <text x="100" y="116" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" fill="#6E7F86" data-i18n="donutCenter">aktif ilan</text>
+        </svg>
+        <ul class="legend">
+          <li><span class="dot" style="background:#176B7A"></span>2+1 · %42</li>
+          <li><span class="dot" style="background:#D9A441"></span>3+1 · %31</li>
+          <li><span class="dot" style="background:#12303F"></span>1+1 · %12</li>
+          <li><span class="dot" style="background:#4E8898"></span>4+1 · %11</li>
+          <li><span class="dot" style="background:#B9CBD1"></span>5+1 · %4</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="portfoy">
@@ -283,6 +341,15 @@ footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone
     </div>
   </section>
 
+  <section id="harita">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="mapEyebrow">Harita</p>
+      <h2 data-i18n="mapTitle">Portföyümüz haritada</h2>
+      <p data-i18n="mapSub">Fiyat etiketine tıklayın, ilan detaylarına gidin. Konumlar mahalle bazında yaklaşıktır.</p>
+    </div>
+    <div id="map" aria-label="İlan haritası"></div>
+  </section>
+
   <section id="rehber">
     <div class="guide">
       <div class="sec-head">
@@ -301,11 +368,11 @@ footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone
 
   <section id="hakkinda">
     <div class="about">
-      <div class="portrait" data-i18n="portraitPh">Mine Gürtuna — fotoğraf eklenecek</div>
+      <img class="portrait" src="mine.jpg" alt="Mine Gürtuna — Sea &amp; Stone Estates">
       <div>
         <p class="eyebrow" data-i18n="aboutEyebrow">Hakkında</p>
-        <h2 style="margin-bottom:16px" data-i18n="aboutTitle">Didim'i bilen bir danışman</h2>
-        <p data-i18n="aboutP1">Mine Gürtuna, sorumlu emlak danışmanlığı yetki belgesine sahip, Aydın Didim merkezli bir gayrimenkul danışmanıdır. Bölgeyi mahalle mahalle tanır; her alıcının bütçesine ve hayaline uygun doğru evi bulmayı ilke edinir.</p>
+        <h2 style="margin-bottom:16px" data-i18n="aboutTitle">Yatırımcı gözüyle bakan bir danışman</h2>
+        <p data-i18n="aboutP1">Mine Gürtuna, gayrimenkule finans dünyasından geldi: Yapı Kredi'de yıllarca yatırım alanında çalıştı. Bu birikim, ona bir evin yalnızca yaşam alanı değil aynı zamanda bir yatırım olduğunu öğretti. Bugün sorumlu emlak danışmanlığı yetki belgesiyle Didim'de; her mülkü müşterisinin bütçesi, hayali ve getiri beklentisi açısından birlikte değerlendiriyor.</p>
         <p data-i18n="aboutP2">Portföyündeki her mülk yerinde incelenir, dürüst şekilde fiyatlanır ve profesyonel fotoğraf ile drone videosuyla sunulur. Yabancı alıcılar için tapu, vergi ve abonelik süreçlerinde uçtan uca destek verir.</p>
         <p data-i18n="aboutP3">Adımız Didim'in iki yüzünden geliyor: masmavi Ege denizi ve Apollon Tapınağı'nın binlerce yıllık taşları. Deniz ve taş — huzur ve kalıcılık.</p>
       </div>
@@ -356,6 +423,8 @@ const i18n = {
     statsEyebrow:"Didim in Numbers", num1:"+22%", num3:"3 days", statsTitle:"A market on the rise", statsSub:"Didim's housing market paints a strong picture for living and investing alike.",
     stat1:"Rise in price per m² over the last year (Didim housing)", stat2:"Average sale price per m² in Didim", stat3:"Average marketing time across our portfolio", stat4:"Sunny days a year — fuelling rental demand",
     statsSrc:"Source: Emlakjet/Endeksa regional data, July 2026. Figures are averages and vary by property.",
+    chartBadge:"+1110% over 5 years (nominal)", chartTitle:"Average sale price per m² in Didim (₺)", donutTitle:"Housing stock by layout (for sale)", donutCenter:"active listings",
+    mapEyebrow:"Map", mapTitle:"Our portfolio on the map", mapSub:"Click a price tag to open the listing. Locations are approximate, by neighbourhood.",
     propEyebrow:"Portfolio", propTitle:"Featured listings", propSub:"Hand-picked from our current portfolio — click any listing for full details and photos.",
     tagSale:"For Sale", propView:"View listing →",
     prop1Title:"Brand-New Detached Villa with Pool in Hisar", prop1Meta:"3 bed · 150 m² · Private pool · Front facing",
@@ -370,11 +439,10 @@ const i18n = {
     step2Title:"Tax Number & Bank", step2Text:"Get your Turkish tax number and open a bank account — we handle it with you.",
     step3Title:"Title Deed Transfer", step3Text:"With an official valuation and land registry appointment, ownership passes safely to you.",
     step4Title:"Key Handover", step4Text:"Utilities, insurance and optional rental management — a home that's ready to move into.",
-    aboutEyebrow:"About", aboutTitle:"A consultant who truly knows Didim",
-    aboutP1:"Mine Gürtuna is a licensed real estate consultant based in Didim, Aydın. She knows the area street by street and is committed to finding the right home for every buyer's budget and dream.",
+    aboutEyebrow:"About", aboutTitle:"A consultant with an investor's eye",
+    aboutP1:"Mine Gürtuna came to real estate from the world of finance, having worked for years in investment at Yapı Kredi, one of Türkiye's leading banks. That background taught her that a home is not only a place to live but also an investment. Today she is a licensed real estate consultant in Didim, evaluating every property with her clients in terms of budget, lifestyle and return potential.",
     aboutP2:"Every property in her portfolio is inspected in person, priced honestly and presented with professional photos and drone video. International buyers receive end-to-end support with deeds, tax and utilities.",
     aboutP3:"Our name comes from the two faces of Didim: the deep blue Aegean sea and the ancient stones of the Temple of Apollo. Sea and stone — serenity and permanence.",
-    portraitPh:"Mine Gürtuna — photo coming soon",
     contactEyebrow:"Contact", contactTitle:"Let's talk about your dream home",
     contactSub:"Quick replies on WhatsApp in English and Turkish.",
     waBtn:"Message on WhatsApp", lblPhone:"Phone", lblMail:"Email", lblAddr:"Office", addrVal:"Didim / Aydın, Türkiye",
@@ -393,6 +461,8 @@ const i18n = {
     statsEyebrow:"Didim in Zahlen", num1:"+22 %", num3:"3 Tage", statsTitle:"Ein Markt im Aufwind", statsSub:"Der Wohnungsmarkt in Didim zeigt ein starkes Bild — zum Wohnen wie zum Investieren.",
     stat1:"Anstieg des m²-Preises im letzten Jahr (Wohnimmobilien Didim)", stat2:"Durchschnittlicher m²-Verkaufspreis in Didim", stat3:"Durchschnittliche Vermarktungsdauer in unserem Portfolio", stat4:"Sonnentage pro Jahr — Motor der Mietnachfrage",
     statsSrc:"Quelle: Regionaldaten Emlakjet/Endeksa, Juli 2026. Durchschnittswerte, je nach Objekt unterschiedlich.",
+    chartBadge:"+1110 % in 5 Jahren (nominal)", chartTitle:"Durchschnittlicher m²-Verkaufspreis in Didim (₺)", donutTitle:"Wohnungsbestand nach Grundriss (zum Verkauf)", donutCenter:"aktive Angebote",
+    mapEyebrow:"Karte", mapTitle:"Unser Portfolio auf der Karte", mapSub:"Auf ein Preisschild klicken, um das Angebot zu öffnen. Standorte sind ungefähr, nach Stadtteil.",
     propEyebrow:"Angebote", propTitle:"Ausgewählte Immobilien", propSub:"Handverlesen aus unserem aktuellen Portfolio — für Details und alle Fotos auf das Angebot klicken.",
     tagSale:"Zu verkaufen", propView:"Zum Angebot →",
     prop1Title:"Neubau-Villa mit Pool in Hisar", prop1Meta:"3 SZ · 150 m² · Privater Pool · Frontlage",
@@ -407,11 +477,10 @@ const i18n = {
     step2Title:"Steuernummer & Bank", step2Text:"Türkische Steuernummer beantragen und Bankkonto eröffnen — wir erledigen es gemeinsam.",
     step3Title:"Grundbucheintrag", step3Text:"Mit offizieller Bewertung und Grundbuchtermin geht das Eigentum sicher auf Sie über.",
     step4Title:"Schlüsselübergabe", step4Text:"Anschlüsse, Versicherung und optionale Vermietungsverwaltung — ein bezugsfertiges Zuhause.",
-    aboutEyebrow:"Über uns", aboutTitle:"Eine Beraterin, die Didim wirklich kennt",
-    aboutP1:"Mine Gürtuna ist lizenzierte Immobilienberaterin mit Sitz in Didim, Aydın. Sie kennt die Region Straße für Straße und findet für jedes Budget das passende Zuhause.",
+    aboutEyebrow:"Über uns", aboutTitle:"Eine Beraterin mit Investorenblick",
+    aboutP1:"Mine Gürtuna kam aus der Finanzwelt in die Immobilienbranche: Sie arbeitete jahrelang im Investmentbereich der Yapı Kredi, einer der führenden Banken der Türkei. Diese Erfahrung lehrte sie, dass ein Haus nicht nur ein Zuhause, sondern auch eine Kapitalanlage ist. Heute ist sie lizenzierte Immobilienberaterin in Didim und bewertet jede Immobilie gemeinsam mit ihren Kunden nach Budget, Lebensstil und Renditepotenzial.",
     aboutP2:"Jede Immobilie im Portfolio wird persönlich geprüft, ehrlich bewertet und mit professionellen Fotos und Drohnenvideo präsentiert. Internationale Käufer erhalten Rundum-Unterstützung bei Grundbuch, Steuern und Anschlüssen.",
     aboutP3:"Unser Name stammt von den zwei Gesichtern Didims: dem tiefblauen Ägäischen Meer und den jahrtausendealten Steinen des Apollon-Tempels. Meer und Stein — Ruhe und Beständigkeit.",
-    portraitPh:"Mine Gürtuna — Foto folgt",
     contactEyebrow:"Kontakt", contactTitle:"Sprechen wir über Ihr Traumhaus",
     contactSub:"Schnelle Antworten per WhatsApp auf Deutsch und Englisch.",
     waBtn:"Per WhatsApp schreiben", lblPhone:"Telefon", lblMail:"E-Mail", lblAddr:"Büro", addrVal:"Didim / Aydın, Türkei",
@@ -438,6 +507,29 @@ function setLang(lang){
   document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
 }
 document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// İlan haritası — konumlar mahalle bazında yaklaşıktır
+const listings = [
+  {t:"Hisar'da Müstakil Havuzlu Sıfır Villa", p:"11.000.000 ₺", pin:"11M ₺", m:"3+1 · 150 m²", lat:37.3862, lng:27.2538, url:"https://www.emlakjet.com/ilan/hisar-mah-mustakil-havuzlu-on-cephe-sifir-villa-19554554"},
+  {t:"Denize Yakın 5+1 Tripleks Villa", p:"6.900.000 ₺", pin:"6,9M ₺", m:"5+1 · 180 m²", lat:37.3692, lng:27.2598, url:"https://www.emlakjet.com/ilan/firsat-51-denize-yakin-konumda-tripleks-villa-19551293"},
+  {t:"Hisar'da Geniş 3+1 Dubleks Daire", p:"6.500.000 ₺", pin:"6,5M ₺", m:"3+1 · 145 m²", lat:37.3838, lng:27.2588, url:"https://www.emlakjet.com/ilan/hisar-mahallesi-nde-firsat-satilik-31-ayri-mutfakli-genis-dubleks-daire-19555901"},
+  {t:"Efeler'de Yüksek Giriş 3+1 Daire", p:"4.850.000 ₺", pin:"4,85M ₺", m:"3+1 · 125 m²", lat:37.3763, lng:27.2687, url:"https://www.emlakjet.com/ilan/efeler-mah-de-yuksek-giris-31-firsat-daire-19554387"},
+  {t:"Çamlık'ta Yatırımlık 2+1 Daire", p:"4.000.000 ₺", pin:"4M ₺", m:"2+1 · 70 m²", lat:37.3572, lng:27.2662, url:"https://www.emlakjet.com/ilan/camlik-mah-yatirimlik-21-satilik-daire-19542865"},
+  {t:"Hisar'da 2+1 Sıfır Daire", p:"3.950.000 ₺", pin:"3,95M ₺", m:"2+1 · 80 m²", lat:37.3818, lng:27.2552, url:"https://www.emlakjet.com/ilan/hisar-mah-21-sifir-daire-19542268"}
+];
+if (window.L) {
+  const map = L.map('map', {scrollWheelZoom:false}).setView([37.372, 27.261], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution:'&copy; OpenStreetMap katkıcıları', maxZoom: 18
+  }).addTo(map);
+  listings.forEach(l=>{
+    const icon = L.divIcon({className:'', html:'<div class="price-pin">'+l.pin+'</div>', iconSize:null, iconAnchor:[28,14]});
+    L.marker([l.lat, l.lng], {icon}).addTo(map)
+      .bindPopup('<b>'+l.t+'</b><br>'+l.p+' · '+l.m+'<br><a href="'+l.url+'" target="_blank" rel="noopener">İlanı Gör →</a>');
+  });
+}
 </script>
 </body>
 </html>
