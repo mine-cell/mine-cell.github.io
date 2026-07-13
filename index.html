@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sea &amp; Stone Estates | Didim — Real Estate in Didim, Türkiye</title>
 <meta name="description" content="Didim ve Altınkum'da satılık ve kiralık gayrimenkul. Property for sale in Didim, Turkey. Immobilien in Didim, Türkei.">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -76,16 +77,23 @@ section{max-width:1100px;margin:0 auto;padding:64px 24px}
 /* Portföy */
 .props{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .prop{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(18,48,63,.06);display:flex;flex-direction:column}
-.prop .photo{height:190px;display:grid;place-items:end start;padding:14px;color:var(--white);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.photo-1{background:linear-gradient(160deg,#176B7A,#12303F)}
-.photo-2{background:linear-gradient(160deg,#D9A441,#B07E22)}
-.photo-3{background:linear-gradient(160deg,#4E8898,#176B7A)}
+.prop .photo{height:190px;overflow:hidden;background:linear-gradient(160deg,#4E8898,#176B7A)}
+.prop .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.prop .ej{font-size:13px;font-weight:700;color:var(--sea);text-decoration:none;margin-top:4px;display:inline-block}
 .prop .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
 .prop h3{font-size:19px}
 .prop .meta{font-size:13.5px;color:var(--stone)}
 .prop .price{margin-top:auto;font-family:'Marcellus',serif;font-size:22px;color:var(--sea)}
 .tag{display:inline-block;background:rgba(217,164,65,.15);color:#8a6414;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase;align-self:flex-start}
 @media(max-width:860px){.props{grid-template-columns:1fr}}
+
+/* Rakamlarla Didim */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{background:var(--white);border-radius:var(--radius);padding:28px 20px;border:1px solid rgba(18,48,63,.06);text-align:center}
+.stat .num{font-family:'Marcellus',serif;font-size:36px;color:var(--sea);line-height:1.1}
+.stat p{font-size:13.5px;color:var(--stone);margin-top:8px}
+.src-note{font-size:12px;color:var(--stone);margin-top:18px;opacity:.8}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
 
 /* Rehber */
 .guide{background:var(--deep);color:var(--white);border-radius:20px;padding:52px 44px}
@@ -119,7 +127,7 @@ footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone
 <header>
   <div class="nav">
     <a class="logo" href="#top" aria-label="Sea &amp; Stone Estates">
-      <span class="logo-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="14"/><line x1="16" y1="4" x2="16" y2="14"/><rect x="5" y="2" width="14" height="2.5" rx="1" fill="currentColor" stroke="none"/><path d="M3 19q3-2.5 6 0t6 0 6 0" /></svg></span>
+      <img src="logo.png" alt="Sea &amp; Stone Estates logosu" style="width:42px;height:42px;border-radius:50%;box-shadow:0 1px 4px rgba(18,48,63,.15)">
       <span class="logo-text">Sea &amp; Stone<small data-i18n="brandSub">Estates · Didim</small></span>
     </a>
     <nav class="menu" aria-label="Site">
@@ -190,38 +198,86 @@ footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone
     </div>
   </section>
 
+  <section id="rakamlar">
+    <div class="sec-head">
+      <p class="eyebrow" data-i18n="statsEyebrow">Rakamlarla Didim</p>
+      <h2 data-i18n="statsTitle">Değer kazanan bir pazar</h2>
+      <p data-i18n="statsSub">Didim konut piyasası hem yaşamak hem yatırım için güçlü bir tablo çiziyor.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num" data-i18n="num1">+%22</div><p data-i18n="stat1">m² fiyatlarında son bir yıllık artış (Didim konut)</p></div>
+      <div class="stat"><div class="num">59.100 ₺</div><p data-i18n="stat2">Didim'de ortalama m² satış fiyatı</p></div>
+      <div class="stat"><div class="num" data-i18n="num3">3 gün</div><p data-i18n="stat3">Portföyümüzde ortalama pazarlama süresi</p></div>
+      <div class="stat"><div class="num">300+</div><p data-i18n="stat4">Yılda güneşli gün — kiralık talebinin motoru</p></div>
+    </div>
+    <p class="src-note" data-i18n="statsSrc">Kaynak: Emlakjet/Endeksa bölge verileri, Temmuz 2026. Değerler ortalamadır, ilana göre değişir.</p>
+  </section>
+
   <section id="portfoy">
     <div class="sec-head">
       <p class="eyebrow" data-i18n="propEyebrow">Portföy</p>
       <h2 data-i18n="propTitle">Öne çıkan ilanlar</h2>
-      <p data-i18n="propSub">Örnek ilanlardır; gerçek portföy fotoğrafları ve drone videolarıyla güncellenecektir.</p>
+      <p data-i18n="propSub">Güncel portföyümüzden seçtiklerimiz — detaylar ve tüm fotoğraflar için ilana tıklayın.</p>
     </div>
     <div class="props">
       <article class="prop">
-        <div class="photo photo-1"><span data-i18n="prop1Badge">Deniz Manzaralı</span></div>
+        <a class="photo" href="https://www.emlakjet.com/ilan/hisar-mah-mustakil-havuzlu-on-cephe-sifir-villa-19554554" target="_blank" rel="noopener"><img src="https://imaj.emlakjet.com/resize/640/0/listing/19554554/DC970EF551B79F070A2F93220BF7406619554554.jpg" alt="Hisar Mahallesi'nde müstakil havuzlu sıfır villa" loading="lazy"></a>
         <div class="body">
           <span class="tag" data-i18n="tagSale">Satılık</span>
-          <h3 data-i18n="prop1Title">Altınkum'da 3+1 Villa</h3>
-          <p class="meta" data-i18n="prop1Meta">Özel havuz · 180 m² · Plaja 600 m</p>
-          <p class="price">€ 245.000</p>
+          <h3 data-i18n="prop1Title">Hisar'da Müstakil Havuzlu Sıfır Villa</h3>
+          <p class="meta" data-i18n="prop1Meta">3+1 · 150 m² · Özel havuz · Ön cephe</p>
+          <p class="price">11.000.000 ₺</p>
+          <a class="ej" href="https://www.emlakjet.com/ilan/hisar-mah-mustakil-havuzlu-on-cephe-sifir-villa-19554554" target="_blank" rel="noopener" data-i18n="propView">İlan detayları →</a>
         </div>
       </article>
       <article class="prop">
-        <div class="photo photo-2"><span data-i18n="prop2Badge">Yeni İlan</span></div>
+        <a class="photo" href="https://www.emlakjet.com/ilan/firsat-51-denize-yakin-konumda-tripleks-villa-19551293" target="_blank" rel="noopener"><img src="https://imaj.emlakjet.com/resize/640/0/listing/19551293/32762E9FE637244983FB8A68F7C9D45E19551293.jpg" alt="Denize yakın 5+1 tripleks villa" loading="lazy"></a>
         <div class="body">
           <span class="tag" data-i18n="tagSale">Satılık</span>
-          <h3 data-i18n="prop2Title">Efeler'de 2+1 Daire</h3>
-          <p class="meta" data-i18n="prop2Meta">Site içi · Ortak havuz · 95 m²</p>
-          <p class="price">€ 98.000</p>
+          <h3 data-i18n="prop2Title">Denize Yakın 5+1 Tripleks Villa</h3>
+          <p class="meta" data-i18n="prop2Meta">5+1 · 180 m² · Villa tipi · Denize yakın</p>
+          <p class="price">6.900.000 ₺</p>
+          <a class="ej" href="https://www.emlakjet.com/ilan/firsat-51-denize-yakin-konumda-tripleks-villa-19551293" target="_blank" rel="noopener" data-i18n="propView">İlan detayları →</a>
         </div>
       </article>
       <article class="prop">
-        <div class="photo photo-3"><span data-i18n="prop3Badge">Yatırımlık</span></div>
+        <a class="photo" href="https://www.emlakjet.com/ilan/hisar-mahallesi-nde-firsat-satilik-31-ayri-mutfakli-genis-dubleks-daire-19555901" target="_blank" rel="noopener"><img src="https://imaj.emlakjet.com/resize/640/0/listing/19555901/5AAF47AE5B459478BC9992B78FD8069219555901.jpg" alt="Hisar Mahallesi'nde geniş 3+1 dubleks daire" loading="lazy"></a>
         <div class="body">
-          <span class="tag" data-i18n="tagLand">Arsa</span>
-          <h3 data-i18n="prop3Title">Akbük'te İmarlı Arsa</h3>
-          <p class="meta" data-i18n="prop3Meta">520 m² · Denize 1,2 km · Villa imarlı</p>
-          <p class="price">€ 120.000</p>
+          <span class="tag" data-i18n="tagSale">Satılık</span>
+          <h3 data-i18n="prop3Title">Hisar'da Geniş 3+1 Dubleks Daire</h3>
+          <p class="meta" data-i18n="prop3Meta">3+1 · 145 m² · Ayrı mutfak · 1. kat</p>
+          <p class="price">6.500.000 ₺</p>
+          <a class="ej" href="https://www.emlakjet.com/ilan/hisar-mahallesi-nde-firsat-satilik-31-ayri-mutfakli-genis-dubleks-daire-19555901" target="_blank" rel="noopener" data-i18n="propView">İlan detayları →</a>
+        </div>
+      </article>
+      <article class="prop">
+        <a class="photo" href="https://www.emlakjet.com/ilan/efeler-mah-de-yuksek-giris-31-firsat-daire-19554387" target="_blank" rel="noopener"><img src="https://imaj.emlakjet.com/resize/640/0/listing/19554387/84718B140C25B47A21FFC51CA0F4619B19554387.jpg" alt="Efeler Mahallesi'nde 3+1 daire" loading="lazy"></a>
+        <div class="body">
+          <span class="tag" data-i18n="tagSale">Satılık</span>
+          <h3 data-i18n="prop4Title">Efeler'de Yüksek Giriş 3+1 Daire</h3>
+          <p class="meta" data-i18n="prop4Meta">3+1 · 125 m² · Yüksek giriş</p>
+          <p class="price">4.850.000 ₺</p>
+          <a class="ej" href="https://www.emlakjet.com/ilan/efeler-mah-de-yuksek-giris-31-firsat-daire-19554387" target="_blank" rel="noopener" data-i18n="propView">İlan detayları →</a>
+        </div>
+      </article>
+      <article class="prop">
+        <a class="photo" href="https://www.emlakjet.com/ilan/camlik-mah-yatirimlik-21-satilik-daire-19542865" target="_blank" rel="noopener"><img src="https://imaj.emlakjet.com/resize/640/0/listing/19542865/039270E5204054CF51741061852D1DC819542865.jpg" alt="Çamlık Mahallesi'nde yatırımlık 2+1 daire" loading="lazy"></a>
+        <div class="body">
+          <span class="tag" data-i18n="tagSale">Satılık</span>
+          <h3 data-i18n="prop5Title">Çamlık'ta Yatırımlık 2+1 Daire</h3>
+          <p class="meta" data-i18n="prop5Meta">2+1 · 70 m² · 2. kat · Yatırımlık</p>
+          <p class="price">4.000.000 ₺</p>
+          <a class="ej" href="https://www.emlakjet.com/ilan/camlik-mah-yatirimlik-21-satilik-daire-19542865" target="_blank" rel="noopener" data-i18n="propView">İlan detayları →</a>
+        </div>
+      </article>
+      <article class="prop">
+        <a class="photo" href="https://www.emlakjet.com/ilan/hisar-mah-21-sifir-daire-19542268" target="_blank" rel="noopener"><img src="https://imaj.emlakjet.com/resize/640/0/listing/19542268/DC2BE8C96062EDDC3EB0E8AC13DEBFC019542268.jpg" alt="Hisar Mahallesi'nde 2+1 sıfır daire" loading="lazy"></a>
+        <div class="body">
+          <span class="tag" data-i18n="tagSale">Satılık</span>
+          <h3 data-i18n="prop6Title">Hisar'da 2+1 Sıfır Daire</h3>
+          <p class="meta" data-i18n="prop6Meta">2+1 · 80 m² · Sıfır bina</p>
+          <p class="price">3.950.000 ₺</p>
+          <a class="ej" href="https://www.emlakjet.com/ilan/hisar-mah-21-sifir-daire-19542268" target="_blank" rel="noopener" data-i18n="propView">İlan detayları →</a>
         </div>
       </article>
     </div>
@@ -297,12 +353,17 @@ const i18n = {
     why1Title:"300+ sunny days a year", why1Text:"Altınkum's shallow golden beach and mild climate make Didim one of the Aegean's favourite spots for holidays and retirement alike.",
     why2Title:"An international community", why2Text:"Home to thousands of British and European owners, Didim has a well-established expat community where you'll instantly feel at home.",
     why3Title:"Strong investment potential", why3Text:"With its marina, the Temple of Apollo and growing tourism, property in Didim offers both lifestyle and rental income.",
-    propEyebrow:"Portfolio", propTitle:"Featured listings", propSub:"Sample listings — real photos and drone videos coming soon.",
-    prop1Badge:"Sea View", prop2Badge:"New Listing", prop3Badge:"Investment",
-    tagSale:"For Sale", tagLand:"Land",
-    prop1Title:"3-Bed Villa in Altınkum", prop1Meta:"Private pool · 180 m² · 600 m to beach",
-    prop2Title:"2-Bed Apartment in Efeler", prop2Meta:"Gated complex · Shared pool · 95 m²",
-    prop3Title:"Building Plot in Akbük", prop3Meta:"520 m² · 1.2 km to sea · Villa zoning",
+    statsEyebrow:"Didim in Numbers", num1:"+22%", num3:"3 days", statsTitle:"A market on the rise", statsSub:"Didim's housing market paints a strong picture for living and investing alike.",
+    stat1:"Rise in price per m² over the last year (Didim housing)", stat2:"Average sale price per m² in Didim", stat3:"Average marketing time across our portfolio", stat4:"Sunny days a year — fuelling rental demand",
+    statsSrc:"Source: Emlakjet/Endeksa regional data, July 2026. Figures are averages and vary by property.",
+    propEyebrow:"Portfolio", propTitle:"Featured listings", propSub:"Hand-picked from our current portfolio — click any listing for full details and photos.",
+    tagSale:"For Sale", propView:"View listing →",
+    prop1Title:"Brand-New Detached Villa with Pool in Hisar", prop1Meta:"3 bed · 150 m² · Private pool · Front facing",
+    prop2Title:"5-Bed Triplex Villa Near the Sea", prop2Meta:"5 bed · 180 m² · Villa · Close to the sea",
+    prop3Title:"Spacious 3-Bed Duplex in Hisar", prop3Meta:"3 bed · 145 m² · Separate kitchen · 1st floor",
+    prop4Title:"3-Bed Apartment in Efeler", prop4Meta:"3 bed · 125 m² · Elevated ground floor",
+    prop5Title:"2-Bed Investment Apartment in Çamlık", prop5Meta:"2 bed · 70 m² · 2nd floor · Great rental potential",
+    prop6Title:"Brand-New 2-Bed Apartment in Hisar", prop6Meta:"2 bed · 80 m² · New build",
     guideEyebrow:"International Buyer's Guide", guideTitle:"Buying a home in Türkiye in 4 steps",
     guideSub:"We guide buyers from the UK and Germany through the whole process, in your own language.",
     step1Title:"Discovery & Virtual Tour", step1Text:"Tour homes remotely via video calls and drone footage, and build your shortlist.",
@@ -329,12 +390,17 @@ const i18n = {
     why1Title:"300+ Sonnentage im Jahr", why1Text:"Der flache, goldene Strand von Altınkum und das milde Klima machen Didim zu einem der beliebtesten Orte der Ägäis — für Urlaub und Ruhestand.",
     why2Title:"Eine internationale Gemeinschaft", why2Text:"Tausende britische und europäische Eigentümer leben bereits in Didim — eine etablierte Community, in der man sich sofort zuhause fühlt.",
     why3Title:"Starkes Investitionspotenzial", why3Text:"Mit Marina, Apollon-Tempel und wachsendem Tourismus bietet eine Immobilie in Didim Lebensqualität und Mieteinnahmen zugleich.",
-    propEyebrow:"Angebote", propTitle:"Ausgewählte Immobilien", propSub:"Beispielangebote — echte Fotos und Drohnenvideos folgen in Kürze.",
-    prop1Badge:"Meerblick", prop2Badge:"Neu", prop3Badge:"Investment",
-    tagSale:"Zu verkaufen", tagLand:"Grundstück",
-    prop1Title:"Villa mit 3 Schlafzimmern in Altınkum", prop1Meta:"Privater Pool · 180 m² · 600 m zum Strand",
-    prop2Title:"2-Zimmer-Wohnung in Efeler", prop2Meta:"Wohnanlage · Gemeinschaftspool · 95 m²",
-    prop3Title:"Baugrundstück in Akbük", prop3Meta:"520 m² · 1,2 km zum Meer · Villenbebauung",
+    statsEyebrow:"Didim in Zahlen", num1:"+22 %", num3:"3 Tage", statsTitle:"Ein Markt im Aufwind", statsSub:"Der Wohnungsmarkt in Didim zeigt ein starkes Bild — zum Wohnen wie zum Investieren.",
+    stat1:"Anstieg des m²-Preises im letzten Jahr (Wohnimmobilien Didim)", stat2:"Durchschnittlicher m²-Verkaufspreis in Didim", stat3:"Durchschnittliche Vermarktungsdauer in unserem Portfolio", stat4:"Sonnentage pro Jahr — Motor der Mietnachfrage",
+    statsSrc:"Quelle: Regionaldaten Emlakjet/Endeksa, Juli 2026. Durchschnittswerte, je nach Objekt unterschiedlich.",
+    propEyebrow:"Angebote", propTitle:"Ausgewählte Immobilien", propSub:"Handverlesen aus unserem aktuellen Portfolio — für Details und alle Fotos auf das Angebot klicken.",
+    tagSale:"Zu verkaufen", propView:"Zum Angebot →",
+    prop1Title:"Neubau-Villa mit Pool in Hisar", prop1Meta:"3 SZ · 150 m² · Privater Pool · Frontlage",
+    prop2Title:"Triplex-Villa mit 5 Schlafzimmern nahe dem Meer", prop2Meta:"5 SZ · 180 m² · Villa · Meernähe",
+    prop3Title:"Große Maisonette-Wohnung in Hisar", prop3Meta:"3 SZ · 145 m² · Separate Küche · 1. Etage",
+    prop4Title:"3-Schlafzimmer-Wohnung in Efeler", prop4Meta:"3 SZ · 125 m² · Hochparterre",
+    prop5Title:"2-Zimmer-Anlageobjekt in Çamlık", prop5Meta:"2 SZ · 70 m² · 2. Etage · Gutes Mietpotenzial",
+    prop6Title:"Neubau-Wohnung mit 2 Schlafzimmern in Hisar", prop6Meta:"2 SZ · 80 m² · Erstbezug",
     guideEyebrow:"Guide für internationale Käufer", guideTitle:"In 4 Schritten zum Haus in der Türkei",
     guideSub:"Wir begleiten Käufer aus Deutschland und Großbritannien durch den gesamten Prozess — in Ihrer Sprache.",
     step1Title:"Besichtigung & virtuelle Tour", step1Text:"Besichtigen Sie Häuser per Videoanruf und Drohnenaufnahmen und erstellen Sie Ihre Auswahl.",
