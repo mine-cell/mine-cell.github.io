@@ -24,6 +24,7 @@ import unicodedata
 from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
+from urllib.parse import unquote
 
 PROFILE_URL = "https://www.emlakjet.com/danismanlar/mine-gurtuna-2400237"
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "listings.json"
@@ -170,18 +171,26 @@ def parse_cards(html: str):
         slug = m.group(1)
         url = f"https://www.emlakjet.com/ilan/{slug}-{listing_id}"
 
-        # Bu linkin etrafındaki ~1800 karakterlik pencereyi analiz penceresi olarak al
-        start = max(0, m.start() - 400)
-        window = html[start:m.start() + 1800]
+        # Bu linkin etrafındaki geniş bir pencereyi analiz için al (Next.js'in
+        # ürettiği sınıf adları çok uzun olabiliyor, mesafe artabilir)
+        start = max(0, m.start() - 800)
+        window = html[start:m.start() + 4000]
 
-        # görsel: aynı ilan id'sini taşıyan imaj.emlakjet.com bağlantısı
-        img_m = re.search(
-            r'https://imaj\.emlakjet\.com/resize/\d+/\d+/listing/' + listing_id + r'/[^\s"\'<>]+\.(?:jpg|jpeg|png)',
-            window)
+        # görsel: aynı ilan id'sini taşıyan imaj.emlakjet.com bağlantısı.
+        # Next.js bazen adresi %-kodlu (URL-encoded) yazıyor ve kart alanından
+        # uzakta (ör. sayfa sonundaki veri bloğunda) olabiliyor — bu yüzden
+        # önce pencerede, bulamazsa TÜM sayfada arıyoruz.
+        img_pattern = (
+            r'imaj\.emlakjet\.com(?:/|%2F)resize(?:/|%2F)\d+(?:/|%2F)\d+(?:/|%2F)listing'
+            r'(?:/|%2F)' + listing_id + r'(?:/|%2F)[^\s"\'<>&]+?\.(?:jpg|jpeg|png|webp|avif)'
+        )
+        img_m = re.search(img_pattern, window) or re.search(img_pattern, html)
         if not img_m:
             skipped_no_image += 1
             continue  # görselsiz kartı güvenilir bulmuyoruz, atla
-        img = img_m.group(0)
+        img = unquote(img_m.group(0))
+        if not img.startswith("http"):
+            img = "https://" + img
 
         # başlık: önce <img alt="..."> (Emlakjet SEO için genelde doldurur),
         # bulunamazsa slug'dan okunabilir bir başlık türet
