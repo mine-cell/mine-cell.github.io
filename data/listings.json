@@ -1,85 +1,178 @@
 [
-  {"id":"19554554","cat":"sale","mahalle":"hisar","price":11000000,"currency":"₺","period":null,
-   "title":{"tr":"Hisar'da Müstakil Havuzlu Sıfır Villa","en":"Brand-New Detached Villa with Pool in Hisar","de":"Neubau-Villa mit Pool in Hisar"},
-   "meta":{"tr":"3+1 · 150 m² · Özel havuz · Ön cephe","en":"3 bed · 150 m² · Private pool · Front facing","de":"3 SZ · 150 m² · Privater Pool · Frontlage"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19554554/DC970EF551B79F070A2F93220BF7406619554554.jpg",
-   "url":"https://www.emlakjet.com/ilan/hisar-mah-mustakil-havuzlu-on-cephe-sifir-villa-19554554",
-   "lat":37.3862,"lng":27.2538},
-
-  {"id":"19551293","cat":"sale","mahalle":"yeni","price":6900000,"currency":"₺","period":null,
-   "title":{"tr":"Denize Yakın 5+1 Tripleks Villa","en":"5-Bed Triplex Villa Near the Sea","de":"Triplex-Villa mit 5 Schlafzimmern nahe dem Meer"},
-   "meta":{"tr":"5+1 · 180 m² · Villa tipi · Denize yakın","en":"5 bed · 180 m² · Villa · Close to the sea","de":"5 SZ · 180 m² · Villa · Meernähe"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19551293/32762E9FE637244983FB8A68F7C9D45E19551293.jpg",
-   "url":"https://www.emlakjet.com/ilan/firsat-51-denize-yakin-konumda-tripleks-villa-19551293",
-   "lat":37.3692,"lng":27.2598},
-
-  {"id":"19555901","cat":"sale","mahalle":"hisar","price":6500000,"currency":"₺","period":null,
-   "title":{"tr":"Hisar'da Geniş 3+1 Dubleks Daire","en":"Spacious 3-Bed Duplex in Hisar","de":"Große Maisonette-Wohnung in Hisar"},
-   "meta":{"tr":"3+1 · 145 m² · Ayrı mutfak · 1. kat","en":"3 bed · 145 m² · Separate kitchen · 1st floor","de":"3 SZ · 145 m² · Separate Küche · 1. Etage"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19555901/5AAF47AE5B459478BC9992B78FD8069219555901.jpg",
-   "url":"https://www.emlakjet.com/ilan/hisar-mahallesi-nde-firsat-satilik-31-ayri-mutfakli-genis-dubleks-daire-19555901",
-   "lat":37.3838,"lng":27.2588},
-
-  {"id":"19554387","cat":"sale","mahalle":"efeler","price":4850000,"currency":"₺","period":null,
-   "title":{"tr":"Efeler'de Yüksek Giriş 3+1 Daire","en":"3-Bed Apartment in Efeler","de":"3-Schlafzimmer-Wohnung in Efeler"},
-   "meta":{"tr":"3+1 · 125 m² · Yüksek giriş","en":"3 bed · 125 m² · Elevated ground floor","de":"3 SZ · 125 m² · Hochparterre"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19554387/84718B140C25B47A21FFC51CA0F4619B19554387.jpg",
-   "url":"https://www.emlakjet.com/ilan/efeler-mah-de-yuksek-giris-31-firsat-daire-19554387",
-   "lat":37.3763,"lng":27.2687},
-
-  {"id":"19542865","cat":"sale","mahalle":"camlik","price":4000000,"currency":"₺","period":null,
-   "title":{"tr":"Çamlık'ta Yatırımlık 2+1 Daire","en":"2-Bed Investment Apartment in Çamlık","de":"2-Zimmer-Anlageobjekt in Çamlık"},
-   "meta":{"tr":"2+1 · 70 m² · 2. kat · Yatırımlık","en":"2 bed · 70 m² · 2nd floor · Great rental potential","de":"2 SZ · 70 m² · 2. Etage · Gutes Mietpotenzial"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19542865/039270E5204054CF51741061852D1DC819542865.jpg",
-   "url":"https://www.emlakjet.com/ilan/camlik-mah-yatirimlik-21-satilik-daire-19542865",
-   "lat":37.3572,"lng":27.2662},
-
-  {"id":"19542268","cat":"sale","mahalle":"hisar","price":3950000,"currency":"₺","period":null,
-   "title":{"tr":"Hisar'da 2+1 Sıfır Daire","en":"Brand-New 2-Bed Apartment in Hisar","de":"Neubau-Wohnung mit 2 Schlafzimmern in Hisar"},
-   "meta":{"tr":"2+1 · 80 m² · Sıfır bina","en":"2 bed · 80 m² · New build","de":"2 SZ · 80 m² · Erstbezug"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19542268/DC2BE8C96062EDDC3EB0E8AC13DEBFC019542268.jpg",
-   "url":"https://www.emlakjet.com/ilan/hisar-mah-21-sifir-daire-19542268",
-   "lat":37.3818,"lng":27.2552},
-
-  {"id":"19620615","cat":"rent","mahalle":"yeni","price":28500,"currency":"₺","period":"ay",
-   "title":{"tr":"Merkezi Konumda Kiralık 3+1","en":"Central 3-Bed Apartment — For Rent","de":"Zentrale 3-Zimmer-Wohnung — zur Miete"},
-   "meta":{"tr":"3+1 · 90 m² · 1. kat","en":"3 bed · 90 m² · 1st floor","de":"3 SZ · 90 m² · 1. Etage"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19620615/47B859E3B370E4F0D607EF175F37264B19620615.jpg",
-   "url":"https://www.emlakjet.com/ilan/merkezi-konumda-kiralik-31-daire-19620615",
-   "lat":37.3702,"lng":27.2612},
-
-  {"id":"19616168","cat":"sale","mahalle":"cumhuriyet","price":6250000,"currency":"₺","period":null,
-   "title":{"tr":"Cumhuriyet'te Sıfır 2+1","en":"Brand-New 2-Bed in Cumhuriyet","de":"Neubau 2-Zimmer in Cumhuriyet"},
-   "meta":{"tr":"2+1 · 90 m² · Yüksek giriş · Sıfır","en":"2 bed · 90 m² · Elevated ground · New build","de":"2 SZ · 90 m² · Hochparterre · Erstbezug"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19616168/D8D2272F3BDBDB0B00946FB4797305BF19616168.png",
-   "url":"https://www.emlakjet.com/ilan/yatirimlik-ve-oturumluk-cumhuriyet-mah-sifir-21-19616168",
-   "lat":37.3758,"lng":27.2648},
-
-  {"id":"19616056","cat":"sale","mahalle":"cumhuriyet","price":5250000,"currency":"₺","period":null,
-   "title":{"tr":"Didim Merkezde Fırsat 2+1","en":"2-Bed Bargain in Didim Centre","de":"2-Zimmer-Angebot im Zentrum"},
-   "meta":{"tr":"2+1 · 85 m² · 3. kat","en":"2 bed · 85 m² · 3rd floor","de":"2 SZ · 85 m² · 3. Etage"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19616056/A6C70DB0B963C3D528070F1D907A34F419616056.jpg",
-   "url":"https://www.emlakjet.com/ilan/didim-in-merkezinde-kacirilmayacak-firsat-19616056",
-   "lat":37.3738,"lng":27.2662},
-
-  {"id":"19619357","cat":"sale","mahalle":"cumhuriyet","price":3850000,"currency":"₺","period":null,
-   "title":{"tr":"Cumhuriyet'te Yatırımlık 1+1","en":"1-Bed Investment Flat in Cumhuriyet","de":"1-Zimmer-Anlage in Cumhuriyet"},
-   "meta":{"tr":"1+1 · 60 m² · 1. kat · Merkezi","en":"1 bed · 60 m² · 1st floor · Central","de":"1 SZ · 60 m² · 1. Etage · Zentral"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19619357/2D018F6E5F47BE4DAC04B7A4E7D971B319619357.jpg",
-   "url":"https://www.emlakjet.com/ilan/cumhuriyet-mahallesi-nde-merkezi-konumda-yatirima-uygun-satilik-11-19619357",
-   "lat":37.3748,"lng":27.2628},
-
-  {"id":"19619230","cat":"sale","mahalle":"cumhuriyet","price":3850000,"currency":"₺","period":null,
-   "title":{"tr":"Cumhuriyet'te Sıfır 1+1","en":"Brand-New 1-Bed in Cumhuriyet","de":"Neubau 1-Zimmer in Cumhuriyet"},
-   "meta":{"tr":"1+1 · 60 m² · 1. kat · Sıfır bina","en":"1 bed · 60 m² · 1st floor · New build","de":"1 SZ · 60 m² · 1. Etage · Erstbezug"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19619230/A76D08B4746E3DD9E680C4A486937C7819619230.jpg",
-   "url":"https://www.emlakjet.com/ilan/kacirilmayacak-firsat-cumhuriyet-mahallesi-nde-sifir-11-19619230",
-   "lat":37.3728,"lng":27.2640},
-
-  {"id":"19616687","cat":"sale","mahalle":"cumhuriyet","price":3850000,"currency":"₺","period":null,
-   "title":{"tr":"Villa Konforunda Bahçe Katı 1+1","en":"Garden-Floor 1-Bed, Villa Comfort","de":"Gartengeschoss 1-Zimmer, Villa-Komfort"},
-   "meta":{"tr":"1+1 · 60 m² · Bahçe katı · Sıfır","en":"1 bed · 60 m² · Garden floor · New build","de":"1 SZ · 60 m² · Gartengeschoss · Erstbezug"},
-   "img":"https://imaj.emlakjet.com/resize/640/0/listing/19616687/9DE1CB13C910B18E3601D396EF4367A619616687.jpg",
-   "url":"https://www.emlakjet.com/ilan/villa-konforunda-apartman-dairesi-cumhuriyet-mah-sifir-11-19616687",
-   "lat":37.3752,"lng":27.2672}
+  {
+    "id": "19626461",
+    "cat": "sale",
+    "mahalle": "efeler",
+    "price": 30500000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "altınkum Mah.denize Yakın 2+1 Eşyalı Kiralık Daire",
+      "en": "4+1 Apartment in Efeler — For Sale",
+      "de": "4+1-Zimmer-Wohnung in Efeler — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "4+1 · 300 m²",
+      "en": "4+1 bed · 300 m²",
+      "de": "4+1 SZ · 300 m²"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19626461/D5FB17DEE72C6799A82C3FAD6900D80119626461.jpg",
+    "url": "https://www.emlakjet.com/ilan/efeler-mah-de-kacirilmayacak-firsat-villa-19626461",
+    "lat": 37.3765,
+    "lng": 27.2683
+  },
+  {
+    "id": "19626385",
+    "cat": "rent",
+    "mahalle": "efeler",
+    "price": 35000,
+    "currency": "₺",
+    "period": "ay",
+    "title": {
+      "tr": "Didim Efeler Mahallesi&#x27;nde Tam Müstakil, Özel Havuzlu Sıfır Lüks Villa",
+      "en": "2+1 Apartment in Efeler — For Rent",
+      "de": "2+1-Zimmer-Wohnung in Efeler — Zu vermieten"
+    },
+    "meta": {
+      "tr": "2+1 · 80 m² · 2. kat",
+      "en": "2+1 bed · 80 m² · 2nd floor",
+      "de": "2+1 SZ · 80 m² · 2. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19626385/4C066F88A1B455878BD261C19C76317319626385.jpg",
+    "url": "https://www.emlakjet.com/ilan/altinkum-mah-denize-yakin-21-esyali-kiralik-daire-19626385",
+    "lat": 37.3768,
+    "lng": 27.2682
+  },
+  {
+    "id": "19626044",
+    "cat": "sale",
+    "mahalle": "efeler",
+    "price": 17950000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "merkezi Konumda Kiralık 3+1 Daire",
+      "en": "3+1 Apartment in Efeler — For Sale",
+      "de": "3+1-Zimmer-Wohnung in Efeler — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "3+1 · 300 m²",
+      "en": "3+1 bed · 300 m²",
+      "de": "3+1 SZ · 300 m²"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19626044/1829BB58DCEEE178BCD3BB722DC1A62E19626044.png",
+    "url": "https://www.emlakjet.com/ilan/didim-efeler-mahallesi-nde-tam-mustakil-ozel-havuzlu-sifir-luks-villa-19626044",
+    "lat": 37.37615,
+    "lng": 27.2678
+  },
+  {
+    "id": "19620615",
+    "cat": "rent",
+    "mahalle": "cumhuriyet",
+    "price": 28500,
+    "currency": "₺",
+    "period": "ay",
+    "title": {
+      "tr": "cumhuriyet Mahallesi&#x27;nde Merkezi Konumda, Yatırıma Uygun Satılık 1+1",
+      "en": "3+1 Apartment in Cumhuriyet — For Rent",
+      "de": "3+1-Zimmer-Wohnung in Cumhuriyet — Zu vermieten"
+    },
+    "meta": {
+      "tr": "3+1 · 90 m² · 1. kat",
+      "en": "3+1 bed · 90 m² · 1st floor",
+      "de": "3+1 SZ · 90 m² · 1. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19620615/47B859E3B370E4F0D607EF175F37264B19620615.jpg",
+    "url": "https://www.emlakjet.com/ilan/merkezi-konumda-kiralik-31-daire-19620615",
+    "lat": 37.37535,
+    "lng": 27.26475
+  },
+  {
+    "id": "19619357",
+    "cat": "sale",
+    "mahalle": "cumhuriyet",
+    "price": 3850000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "kaçırılmayacak Fırsat! Cumhuriyet Mahallesi&#x27;nde Sıfır 1+1",
+      "en": "1+1 Apartment in Cumhuriyet — For Sale",
+      "de": "1+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "1+1 · 60 m² · 1. kat",
+      "en": "1+1 bed · 60 m² · 1st floor",
+      "de": "1+1 SZ · 60 m² · 1. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19619357/2D018F6E5F47BE4DAC04B7A4E7D971B319619357.jpg",
+    "url": "https://www.emlakjet.com/ilan/cumhuriyet-mahallesi-nde-merkezi-konumda-yatirima-uygun-satilik-11-19619357",
+    "lat": 37.3746,
+    "lng": 27.26445
+  },
+  {
+    "id": "19619230",
+    "cat": "sale",
+    "mahalle": "cumhuriyet",
+    "price": 3850000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "​ Villa Konforunda Apartman Dairesi! Cumhuriyet Mah. Sıfır 1+1",
+      "en": "1+1 Apartment in Cumhuriyet — For Sale",
+      "de": "1+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "1+1 · 60 m² · 1. kat",
+      "en": "1+1 bed · 60 m² · 1st floor",
+      "de": "1+1 SZ · 60 m² · 1. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19619230/A76D08B4746E3DD9E680C4A486937C7819619230.jpg",
+    "url": "https://www.emlakjet.com/ilan/kacirilmayacak-firsat-cumhuriyet-mahallesi-nde-sifir-11-19619230",
+    "lat": 37.3744,
+    "lng": 27.2643
+  },
+  {
+    "id": "19616687",
+    "cat": "sale",
+    "mahalle": "cumhuriyet",
+    "price": 3850000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "​ Yatırımlık Ve Oturumluk! Cumhuriyet Mah. Sıfır 2+1",
+      "en": "1+1 Apartment in Cumhuriyet — For Sale",
+      "de": "1+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "1+1 · 60 m² · Bahçe katı",
+      "en": "1+1 bed · 60 m² · Garden floor",
+      "de": "1+1 SZ · 60 m² · Gartengeschoss"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19616687/9DE1CB13C910B18E3601D396EF4367A619616687.jpg",
+    "url": "https://www.emlakjet.com/ilan/villa-konforunda-apartman-dairesi-cumhuriyet-mah-sifir-11-19616687",
+    "lat": 37.37425,
+    "lng": 27.26485
+  },
+  {
+    "id": "19616168",
+    "cat": "sale",
+    "mahalle": "cumhuriyet",
+    "price": 6250000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Yatirimlik Ve Oturumluk Cumhuriyet Mah Sifir 21",
+      "en": "2+1 Apartment in Cumhuriyet — For Sale",
+      "de": "2+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "2+1 · 90 m² · Yüksek giriş",
+      "en": "2+1 bed · 90 m² · Elevated ground floor",
+      "de": "2+1 SZ · 90 m² · Hochparterre"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19616168/D8D2272F3BDBDB0B00946FB4797305BF19616168.png",
+    "url": "https://www.emlakjet.com/ilan/yatirimlik-ve-oturumluk-cumhuriyet-mah-sifir-21-19616168",
+    "lat": 37.37495,
+    "lng": 27.2642
+  }
 ]
