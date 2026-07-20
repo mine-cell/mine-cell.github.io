@@ -161,6 +161,28 @@ img.portrait{object-fit:cover;display:block}
 
 footer{text-align:center;padding:36px 24px 48px;font-size:13px;color:var(--stone)}
 </style>
+<!-- ============================================================
+     GOOGLE SEARCH CONSOLE — doğrulama
+     search.google.com/search-console adresine girin, "Alan Adı" değil
+     "URL ön eki" (URL prefix) seçeneğiyle seaandstoneestates.com'u ekleyin,
+     "HTML etiketi" (HTML tag) yöntemini seçin, size verilen tam <meta> satırını
+     kopyalayıp SADECE aşağıdaki satırla değiştirin (yerini değiştirmeyin).
+     ============================================================ -->
+<meta name="google-site-verification" content="BURAYA_GOOGLE_KODUNU_YAPISTIRIN" />
+
+<!-- ============================================================
+     GOOGLE ANALYTICS (GA4) — ziyaretçi ölçümü
+     analytics.google.com → Yönetici → Veri Akışları → Web akışı oluşturun
+     (URL: seaandstoneestates.com). Size "G-" ile başlayan bir Ölçüm Kimliği
+     verecek. Aşağıdaki İKİ yerdeki "G-XXXXXXXXXX" yazısını o kodla değiştirin.
+     ============================================================ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 </head>
 <body>
 
