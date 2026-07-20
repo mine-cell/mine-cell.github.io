@@ -87,9 +87,40 @@ def slugify_ascii(text: str) -> str:
 
 
 def fetch(url: str) -> str:
-    req = Request(url, headers={"User-Agent": UA, "Accept-Language": "tr-TR,tr;q=0.9"})
+    req = Request(url, headers={
+        "User-Agent": UA,
+        "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    })
     with urlopen(req, timeout=25) as resp:
-        return resp.read().decode("utf-8", errors="replace")
+        raw = resp.read()
+        encoding = resp.headers.get("Content-Encoding", "")
+        status = resp.status
+        final_url = resp.geturl()
+
+    if encoding == "gzip":
+        import gzip
+        raw = gzip.decompress(raw)
+    elif encoding == "br":
+        try:
+            import brotli
+            raw = brotli.decompress(raw)
+        except ImportError:
+            print("[uyarı] içerik brotli ile sıkıştırılmış ama 'brotli' paketi kurulu değil", file=sys.stderr)
+    elif encoding == "deflate":
+        import zlib
+        raw = zlib.decompress(raw)
+
+    html = raw.decode("utf-8", errors="replace")
+    # Teşhis: her zaman logla — sorun çıkarsa Actions loglarından tam olarak
+    # sitenin ne döndürdüğünü görebilelim.
+    print(f"[teşhis] GET {url}")
+    print(f"[teşhis] durum kodu: {status} | son adres: {final_url} | encoding: {encoding or 'yok'}")
+    print(f"[teşhis] ham boyut: {len(raw)} bayt | çözülmüş metin: {len(html)} karakter")
+    print(f"[teşhis] içerik başlangıcı: {html[:300]!r}")
+    if len(html) < 2000:
+        print("[uyarı] sayfa içeriği çok kısa — bot engeli / CAPTCHA / boş kabuk olabilir", file=sys.stderr)
+    return html
 
 
 def guess_mahalle(text: str) -> str:
@@ -129,8 +160,10 @@ def clean_title(raw: str) -> str:
 def parse_cards(html: str):
     """Profil sayfasındaki ilan kartlarını (/ilan/ linki + görsel + fiyat) çıkarır."""
     results = {}
-    # Her "/ilan/<slug>-<id>" linkini bul
-    for m in re.finditer(r'/ilan/([a-z0-9\-şöçğüıİĞÜŞÖÇ]+)-(\d{6,})', html, re.IGNORECASE):
+    all_links = list(re.finditer(r'/ilan/([a-z0-9\-şöçğüıİĞÜŞÖÇ]+)-(\d{6,})', html, re.IGNORECASE))
+    print(f"[teşhis] '/ilan/' deseniyle eşleşen link sayısı: {len(all_links)}")
+    skipped_no_image, skipped_no_price = 0, 0
+    for m in all_links:
         listing_id = m.group(2)
         if listing_id in results:
             continue
@@ -146,6 +179,7 @@ def parse_cards(html: str):
             r'https://imaj\.emlakjet\.com/resize/\d+/\d+/listing/' + listing_id + r'/[^\s"\'<>]+\.(?:jpg|jpeg|png)',
             window)
         if not img_m:
+            skipped_no_image += 1
             continue  # görselsiz kartı güvenilir bulmuyoruz, atla
         img = img_m.group(0)
 
@@ -162,6 +196,7 @@ def parse_cards(html: str):
         # fiyat: "11.000.000 ₺" veya "28.500 ₺"
         price_m = re.search(r'([\d][\d\.]{2,})\s*₺', window)
         if not price_m:
+            skipped_no_price += 1
             continue
         price = int(price_m.group(1).replace(".", ""))
 
@@ -181,6 +216,7 @@ def parse_cards(html: str):
             "rooms": rooms, "m2": m2, "floor_tr": floor_tr, "floor_en": floor_en, "floor_de": floor_de,
             "mahalle": mahalle,
         }
+    print(f"[teşhis] görselsiz atlanan: {skipped_no_image} | fiyatsız atlanan: {skipped_no_price} | başarıyla ayrıştırılan: {len(results)}")
     return results
 
 
