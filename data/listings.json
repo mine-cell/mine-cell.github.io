@@ -174,5 +174,159 @@
     "url": "https://www.emlakjet.com/ilan/yatirimlik-ve-oturumluk-cumhuriyet-mah-sifir-21-19616168",
     "lat": 37.37495,
     "lng": 27.2642
+  },
+  {
+    "id": "19616056",
+    "cat": "sale",
+    "mahalle": "hisar",
+    "price": 5250000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Hısar Mahallesi’nde Fırsat: Satılık 3+1 Ayrı Mutfaklı Geniş Dubleks Daire",
+      "en": "2+1 Apartment in Hisar — For Sale",
+      "de": "2+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "2+1 · 85 m² · 3. kat",
+      "en": "2+1 bed · 85 m² · 3rd floor",
+      "de": "2+1 SZ · 85 m² · 3. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19616056/A6C70DB0B963C3D528070F1D907A34F419616056.jpg",
+    "url": "https://www.emlakjet.com/ilan/didim-in-merkezinde-kacirilmayacak-firsat-19616056",
+    "lat": 37.3848,
+    "lng": 27.25555
+  },
+  {
+    "id": "19555901",
+    "cat": "sale",
+    "mahalle": "hisar",
+    "price": 6500000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Hisar Mah.müstakil Havuzlu Ön Cephe Sıfır Villa",
+      "en": "3+1 Apartment in Hisar — For Sale",
+      "de": "3+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "3+1 · 145 m² · 1. kat",
+      "en": "3+1 bed · 145 m² · 1st floor",
+      "de": "3+1 SZ · 145 m² · 1. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19555901/5AAF47AE5B459478BC9992B78FD8069219555901.jpg",
+    "url": "https://www.emlakjet.com/ilan/hisar-mahallesi-nde-firsat-satilik-31-ayri-mutfakli-genis-dubleks-daire-19555901",
+    "lat": 37.38305,
+    "lng": 27.2564
+  },
+  {
+    "id": "19554554",
+    "cat": "sale",
+    "mahalle": "hisar",
+    "price": 11000000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Efeler Mah.de Yüksek Giriş 3+1 Fırsat Daire",
+      "en": "3+1 Apartment in Hisar — For Sale",
+      "de": "3+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "3+1 · 150 m² · 1. kat",
+      "en": "3+1 bed · 150 m² · 1st floor",
+      "de": "3+1 SZ · 150 m² · 1. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19554554/DC970EF551B79F070A2F93220BF7406619554554.jpg",
+    "url": "https://www.emlakjet.com/ilan/hisar-mah-mustakil-havuzlu-on-cephe-sifir-villa-19554554",
+    "lat": 37.384,
+    "lng": 27.25595
+  },
+  {
+    "id": "19554387",
+    "cat": "sale",
+    "mahalle": "efeler",
+    "price": 4850000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Fırsat 5+1 Denize Yakın Konumda Tripleks Villa",
+      "en": "3+1 Apartment in Efeler — For Sale",
+      "de": "3+1-Zimmer-Wohnung in Efeler — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "3+1 · 125 m² · Yüksek giriş",
+      "en": "3+1 bed · 125 m² · Elevated ground floor",
+      "de": "3+1 SZ · 125 m² · Hochparterre"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19554387/84718B140C25B47A21FFC51CA0F4619B19554387.jpg",
+    "url": "https://www.emlakjet.com/ilan/efeler-mah-de-yuksek-giris-31-firsat-daire-19554387",
+    "lat": 37.37635,
+    "lng": 27.26795
+  },
+  {
+    "id": "19551293",
+    "cat": "sale",
+    "mahalle": "camlik",
+    "price": 6900000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Çamlık Mah.yatırımlık 2+1 Satılık Daire",
+      "en": "5+1 Apartment in Camlik — For Sale",
+      "de": "5+1-Zimmer-Wohnung in Camlik — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "5+1 · 180 m²",
+      "en": "5+1 bed · 180 m²",
+      "de": "5+1 SZ · 180 m²"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19551293/32762E9FE637244983FB8A68F7C9D45E19551293.jpg",
+    "url": "https://www.emlakjet.com/ilan/firsat-51-denize-yakin-konumda-tripleks-villa-19551293",
+    "lat": 37.3562,
+    "lng": 27.26535
+  },
+  {
+    "id": "19542865",
+    "cat": "sale",
+    "mahalle": "hisar",
+    "price": 4000000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Hisar Mah.2+1 Sıfır Daire",
+      "en": "2+1 Apartment in Hisar — For Sale",
+      "de": "2+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "2+1 · 70 m² · 2. kat",
+      "en": "2+1 bed · 70 m² · 2nd floor",
+      "de": "2+1 SZ · 70 m² · 2. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19542865/039270E5204054CF51741061852D1DC819542865.jpg",
+    "url": "https://www.emlakjet.com/ilan/camlik-mah-yatirimlik-21-satilik-daire-19542865",
+    "lat": 37.3834,
+    "lng": 27.2563
+  },
+  {
+    "id": "19542268",
+    "cat": "sale",
+    "mahalle": "hisar",
+    "price": 3950000,
+    "currency": "₺",
+    "period": null,
+    "title": {
+      "tr": "Hisar Mah 21 Sifir Daire",
+      "en": "2+1 Apartment in Hisar — For Sale",
+      "de": "2+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
+    },
+    "meta": {
+      "tr": "2+1 · 80 m² · Yüksek giriş",
+      "en": "2+1 bed · 80 m² · Elevated ground floor",
+      "de": "2+1 SZ · 80 m² · Hochparterre"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19542268/DC2BE8C96062EDDC3EB0E8AC13DEBFC019542268.jpg",
+    "url": "https://www.emlakjet.com/ilan/hisar-mah-21-sifir-daire-19542268",
+    "lat": 37.3843,
+    "lng": 27.25555
   }
 ]
