@@ -1,0 +1,52 @@
+name: Portföyü Emlakjet'ten Güncelle
+
+on:
+  schedule:
+    # Pazartesi ve Perşembe sabahı 06:00 (Türkiye saatiyle ~09:00, yaz saati)
+    - cron: '0 6 * * 1,4'
+  workflow_dispatch: {}   # "Actions" sekmesinden elle de tetiklenebilir
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Emlakjet'ten ilanları çek
+        id: scrape
+        run: python3 scripts/scrape_emlakjet.py
+
+      - name: Değişiklik var mı kontrol et
+        id: diff
+        run: |
+          if git diff --quiet -- data/listings.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Değişiklikleri commit'le ve yayınla
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "Sea & Stone Estates Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/listings.json
+          git commit -m "Portföy otomatik güncellendi: $(date '+%d.%m.%Y %H:%M')"
+          git push
+
+      - name: Sonuç özeti
+        run: |
+          if [ "${{ steps.diff.outputs.changed }}" = "true" ]; then
+            echo "✅ Portföy güncellendi ve GitHub'a gönderildi."
+          else
+            echo "ℹ️ Emlakjet'te değişiklik yok, dosya aynı kaldı."
+          fi
