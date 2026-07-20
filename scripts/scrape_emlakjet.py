@@ -264,7 +264,7 @@ def build_listing(raw: dict) -> dict:
 def main():
     all_raw = {}
     for page in range(1, MAX_PAGES + 1):
-        url = PROFILE_URL if page == 1 else f"{PROFILE_URL}?page={page}"
+        url = PROFILE_URL if page == 1 else f"{PROFILE_URL}?sayfa={page}"
         try:
             html = fetch(url)
         except (URLError, HTTPError) as e:
