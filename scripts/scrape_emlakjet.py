@@ -164,17 +164,33 @@ def parse_cards(html: str):
     all_links = list(re.finditer(r'/ilan/([a-z0-9\-şöçğüıİĞÜŞÖÇ]+)-(\d{6,})', html, re.IGNORECASE))
     print(f"[teşhis] '/ilan/' deseniyle eşleşen link sayısı: {len(all_links)}")
     skipped_no_image, skipped_no_price = 0, 0
-    for m in all_links:
+    for idx, m in enumerate(all_links):
         listing_id = m.group(2)
         if listing_id in results:
             continue
         slug = m.group(1)
         url = f"https://www.emlakjet.com/ilan/{slug}-{listing_id}"
 
-        # Bu linkin etrafındaki geniş bir pencereyi analiz için al (Next.js'in
-        # ürettiği sınıf adları çok uzun olabiliyor, mesafe artabilir)
-        start = max(0, m.start() - 800)
-        window = html[start:m.start() + 4000]
+        # ÖNEMLİ: iki AYRI pencere kullanıyoruz, çünkü kart içindeki bilgiler
+        # linkin hem önünde hem arkasında olabiliyor. Görsel açıklaması (alt
+        # metni) linkten ÖNCE, fiyat/oda/kat bilgisi linkten SONRA geliyor.
+        # Tek bir geniş pencere kullanmak, komşu kartların bilgilerinin
+        # birbirine karışmasına yol açıyordu (gerçek veriyle test edilirken
+        # bu hata tam olarak görüldü). Bu yüzden:
+        #   back_window: sadece ÖNCEKİ ilanın bittiği yer ile bu linkin
+        #                başlangıcı arası (görsel/başlık için)
+        #   fwd_window : sadece bu linkin başlangıcı ile SONRAKİ ilanın
+        #                başladığı yer arası (fiyat/oda/kat için)
+        prev_end = all_links[idx - 1].end() if idx > 0 else 0
+        next_start = all_links[idx + 1].start() if idx + 1 < len(all_links) else len(html)
+        back_start = max(0, prev_end, m.start() - 800)
+        fwd_end = min(next_start, m.start() + 4000)
+        back_window = html[back_start:m.start()]
+        fwd_window = html[m.start():fwd_end]
+        # görsel araması için ayrı, daha geniş bir alan kullanıyoruz (Next.js
+        # bazen görseli kart metninden bağımsız bir veri bloğunda tutuyor);
+        # bu güvenli çünkü aşağıdaki desen listing_id'yi zaten şart koşuyor.
+        img_window = html[back_start:m.start() + 4000]
 
         # görsel: aynı ilan id'sini taşıyan imaj.emlakjet.com bağlantısı.
         # Next.js bazen adresi %-kodlu (URL-encoded) yazıyor ve kart alanından
@@ -184,7 +200,7 @@ def parse_cards(html: str):
             r'imaj\.emlakjet\.com(?:/|%2F)resize(?:/|%2F)\d+(?:/|%2F)\d+(?:/|%2F)listing'
             r'(?:/|%2F)' + listing_id + r'(?:/|%2F)[^\s"\'<>&]+?\.(?:jpg|jpeg|png|webp|avif)'
         )
-        img_m = re.search(img_pattern, window) or re.search(img_pattern, html)
+        img_m = re.search(img_pattern, img_window) or re.search(img_pattern, html)
         if not img_m:
             skipped_no_image += 1
             continue  # görselsiz kartı güvenilir bulmuyoruz, atla
@@ -192,31 +208,35 @@ def parse_cards(html: str):
         if not img.startswith("http"):
             img = "https://" + img
 
-        # başlık: önce <img alt="..."> (Emlakjet SEO için genelde doldurur),
-        # bulunamazsa slug'dan okunabilir bir başlık türet
-        title_m = re.search(r'alt=["\']([^"\']{8,160})["\']', window)
+        # başlık: önce <img alt="..."> (Emlakjet SEO için genelde doldurur,
+        # linkten ÖNCE gelir), bulunamazsa linkin kendi metni ya da slug'dan
+        # okunabilir bir başlık türet
+        title_m = re.search(r'alt=["\']([^"\']{8,160})["\']', back_window)
         if title_m:
             title_raw = title_m.group(1)
         else:
-            title_m2 = re.search(r'<h[23][^>]*>\s*([^<]{8,160})\s*</h[23]>', window)
+            title_m2 = re.search(r'>([^<]{8,160})</a>', fwd_window[:200])
             title_raw = title_m2.group(1) if title_m2 else slug.replace("-", " ").title()
         title = clean_title(title_raw)
 
-        # fiyat: "11.000.000 ₺" veya "28.500 ₺"
-        price_m = re.search(r'([\d][\d\.]{2,})\s*₺', window)
+        # fiyat: "11.000.000 ₺" veya "28.500 ₺" — önce bu kartın kendi ileri
+        # alanında ara; orada yoksa (bazı sayfa düzenlerinde fiyat linkten
+        # önce de olabilir) güvenli geri alanda dene — back_window zaten
+        # önceki karta taşmayacak şekilde sınırlı, o yüzden güvenli.
+        price_m = re.search(r'([\d][\d\.]{2,})\s*₺', fwd_window) or re.search(r'([\d][\d\.]{2,})\s*₺', back_window)
         if not price_m:
             skipped_no_price += 1
             continue
         price = int(price_m.group(1).replace(".", ""))
 
-        # oda + m²
-        room_m = re.search(r'\b([1-6])\s*\+\s*([0-2])\b', window)
-        m2_m = re.search(r'(\d{2,4})\s*m²', window)
+        # oda + m² + kat — aynı mantık: önce ileri, yoksa güvenli geri alan
+        room_m = re.search(r'\b([1-6])\s*\+\s*([0-2])\b', fwd_window) or re.search(r'\b([1-6])\s*\+\s*([0-2])\b', back_window)
+        m2_m = re.search(r'(\d{2,4})\s*m²', fwd_window) or re.search(r'(\d{2,4})\s*m²', back_window)
         rooms = f"{room_m.group(1)}+{room_m.group(2)}" if room_m else None
         m2 = m2_m.group(1) if m2_m else None
 
-        floor_tr, floor_en, floor_de = guess_floor(window)
-        is_rent = "kiralık" in slugify_ascii(title) or "kiralik" in slug or "/ay" in window[:400]
+        floor_tr, floor_en, floor_de = guess_floor(fwd_window + " " + back_window)
+        is_rent = "kiralık" in slugify_ascii(title) or "kiralik" in slug or "/ay" in fwd_window[:400]
         mahalle = guess_mahalle(slug + " " + title)
 
         results[listing_id] = {
