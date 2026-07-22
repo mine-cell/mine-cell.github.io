@@ -1,5 +1,27 @@
 [
   {
+    "id": "19635672",
+    "cat": "rent",
+    "mahalle": "didim",
+    "price": 25000,
+    "currency": "₺",
+    "period": "ay",
+    "title": {
+      "tr": "Kent Meydanı Yakınında 3+1 Boş Kiralık Dubleks Daire",
+      "en": "3+1 Apartment in Didim — For Rent",
+      "de": "3+1-Zimmer-Wohnung in Didim — Zu vermieten"
+    },
+    "meta": {
+      "tr": "3+1 · 120 m² · 3. kat",
+      "en": "3+1 bed · 120 m² · 3rd floor",
+      "de": "3+1 SZ · 120 m² · 3. Etage"
+    },
+    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19635672/A77040050D0D76CF84088D184A357A0B19635672.jpg",
+    "url": "https://www.emlakjet.com/ilan/kent-meydani-yakininda-31-bos-kiralik-dubleks-daire-19635672",
+    "lat": 37.3718,
+    "lng": 27.2609
+  },
+  {
     "id": "19626461",
     "cat": "sale",
     "mahalle": "efeler",
@@ -7,7 +29,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "altınkum Mah.denize Yakın 2+1 Eşyalı Kiralık Daire",
+      "tr": "efeler Mah.de Kaçırılmayacak Fırsat Villa ‼️",
       "en": "4+1 Apartment in Efeler — For Sale",
       "de": "4+1-Zimmer-Wohnung in Efeler — Zu verkaufen"
     },
@@ -24,14 +46,14 @@
   {
     "id": "19626385",
     "cat": "rent",
-    "mahalle": "efeler",
+    "mahalle": "altinkum",
     "price": 35000,
     "currency": "₺",
     "period": "ay",
     "title": {
-      "tr": "Didim Efeler Mahallesi&#x27;nde Tam Müstakil, Özel Havuzlu Sıfır Lüks Villa",
-      "en": "2+1 Apartment in Efeler — For Rent",
-      "de": "2+1-Zimmer-Wohnung in Efeler — Zu vermieten"
+      "tr": "altınkum Mah.denize Yakın 2+1 Eşyalı Kiralık Daire",
+      "en": "2+1 Apartment in Altinkum — For Rent",
+      "de": "2+1-Zimmer-Wohnung in Altinkum — Zu vermieten"
     },
     "meta": {
       "tr": "2+1 · 80 m² · 2. kat",
@@ -40,8 +62,8 @@
     },
     "img": "https://imaj.emlakjet.com/resize/320/0/listing/19626385/4C066F88A1B455878BD261C19C76317319626385.jpg",
     "url": "https://www.emlakjet.com/ilan/altinkum-mah-denize-yakin-21-esyali-kiralik-daire-19626385",
-    "lat": 37.3768,
-    "lng": 27.2682
+    "lat": 37.3605,
+    "lng": 27.2505
   },
   {
     "id": "19626044",
@@ -51,7 +73,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "merkezi Konumda Kiralık 3+1 Daire",
+      "tr": "Didim Efeler Mahallesi&#x27;nde Tam Müstakil, Özel Havuzlu Sıfır Lüks Villa",
       "en": "3+1 Apartment in Efeler — For Sale",
       "de": "3+1-Zimmer-Wohnung in Efeler — Zu verkaufen"
     },
@@ -68,24 +90,24 @@
   {
     "id": "19620615",
     "cat": "rent",
-    "mahalle": "cumhuriyet",
+    "mahalle": "didim",
     "price": 28500,
     "currency": "₺",
     "period": "ay",
     "title": {
-      "tr": "cumhuriyet Mahallesi&#x27;nde Merkezi Konumda, Yatırıma Uygun Satılık 1+1",
-      "en": "3+1 Apartment in Cumhuriyet — For Rent",
-      "de": "3+1-Zimmer-Wohnung in Cumhuriyet — Zu vermieten"
+      "tr": "merkezi Konumda Kiralık 3+1 Daire",
+      "en": "3+1 Apartment in Didim — For Rent",
+      "de": "3+1-Zimmer-Wohnung in Didim — Zu vermieten"
     },
     "meta": {
       "tr": "3+1 · 90 m² · 1. kat",
       "en": "3+1 bed · 90 m² · 1st floor",
       "de": "3+1 SZ · 90 m² · 1. Etage"
     },
-    "img": "https://imaj.emlakjet.com/resize/320/0/listing/19620615/47B859E3B370E4F0D607EF175F37264B19620615.jpg",
+    "img": "https://imaj.emlakjet.com/resize/640/0/listing/19620615/47B859E3B370E4F0D607EF175F37264B19620615.jpg",
     "url": "https://www.emlakjet.com/ilan/merkezi-konumda-kiralik-31-daire-19620615",
-    "lat": 37.37535,
-    "lng": 27.26475
+    "lat": 37.37285,
+    "lng": 27.26075
   },
   {
     "id": "19619357",
@@ -95,7 +117,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "kaçırılmayacak Fırsat! Cumhuriyet Mahallesi&#x27;nde Sıfır 1+1",
+      "tr": "cumhuriyet Mahallesi&#x27;nde Merkezi Konumda, Yatırıma Uygun Satılık 1+1",
       "en": "1+1 Apartment in Cumhuriyet — For Sale",
       "de": "1+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
     },
@@ -117,7 +139,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "​ Villa Konforunda Apartman Dairesi! Cumhuriyet Mah. Sıfır 1+1",
+      "tr": "kaçırılmayacak Fırsat! Cumhuriyet Mahallesi&#x27;nde Sıfır 1+1",
       "en": "1+1 Apartment in Cumhuriyet — For Sale",
       "de": "1+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
     },
@@ -139,7 +161,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "​ Yatırımlık Ve Oturumluk! Cumhuriyet Mah. Sıfır 2+1",
+      "tr": "​ Villa Konforunda Apartman Dairesi! Cumhuriyet Mah. Sıfır 1+1",
       "en": "1+1 Apartment in Cumhuriyet — For Sale",
       "de": "1+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
     },
@@ -161,7 +183,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Yatirimlik Ve Oturumluk Cumhuriyet Mah Sifir 21",
+      "tr": "​ Yatırımlık Ve Oturumluk! Cumhuriyet Mah. Sıfır 2+1",
       "en": "2+1 Apartment in Cumhuriyet — For Sale",
       "de": "2+1-Zimmer-Wohnung in Cumhuriyet — Zu verkaufen"
     },
@@ -178,14 +200,14 @@
   {
     "id": "19616056",
     "cat": "sale",
-    "mahalle": "hisar",
+    "mahalle": "didim",
     "price": 5250000,
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Hısar Mahallesi’nde Fırsat: Satılık 3+1 Ayrı Mutfaklı Geniş Dubleks Daire",
-      "en": "2+1 Apartment in Hisar — For Sale",
-      "de": "2+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
+      "tr": "didim&#x27;in Merkezinde Kaçırılmayacak Fırsat",
+      "en": "2+1 Apartment in Didim — For Sale",
+      "de": "2+1-Zimmer-Wohnung in Didim — Zu verkaufen"
     },
     "meta": {
       "tr": "2+1 · 85 m² · 3. kat",
@@ -194,8 +216,8 @@
     },
     "img": "https://imaj.emlakjet.com/resize/320/0/listing/19616056/A6C70DB0B963C3D528070F1D907A34F419616056.jpg",
     "url": "https://www.emlakjet.com/ilan/didim-in-merkezinde-kacirilmayacak-firsat-19616056",
-    "lat": 37.3848,
-    "lng": 27.25555
+    "lat": 37.373,
+    "lng": 27.26005
   },
   {
     "id": "19555901",
@@ -205,7 +227,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Hisar Mah.müstakil Havuzlu Ön Cephe Sıfır Villa",
+      "tr": "Hısar Mahallesi’nde Fırsat: Satılık 3+1 Ayrı Mutfaklı Geniş Dubleks Daire",
       "en": "3+1 Apartment in Hisar — For Sale",
       "de": "3+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
     },
@@ -227,7 +249,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Efeler Mah.de Yüksek Giriş 3+1 Fırsat Daire",
+      "tr": "Hisar Mah.müstakil Havuzlu Ön Cephe Sıfır Villa",
       "en": "3+1 Apartment in Hisar — For Sale",
       "de": "3+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
     },
@@ -249,7 +271,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Fırsat 5+1 Denize Yakın Konumda Tripleks Villa",
+      "tr": "Efeler Mah.de Yüksek Giriş 3+1 Fırsat Daire",
       "en": "3+1 Apartment in Efeler — For Sale",
       "de": "3+1-Zimmer-Wohnung in Efeler — Zu verkaufen"
     },
@@ -266,14 +288,14 @@
   {
     "id": "19551293",
     "cat": "sale",
-    "mahalle": "camlik",
+    "mahalle": "didim",
     "price": 6900000,
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Çamlık Mah.yatırımlık 2+1 Satılık Daire",
-      "en": "5+1 Apartment in Camlik — For Sale",
-      "de": "5+1-Zimmer-Wohnung in Camlik — Zu verkaufen"
+      "tr": "Fırsat 5+1 Denize Yakın Konumda Tripleks Villa",
+      "en": "5+1 Apartment in Didim — For Sale",
+      "de": "5+1-Zimmer-Wohnung in Didim — Zu verkaufen"
     },
     "meta": {
       "tr": "5+1 · 180 m²",
@@ -282,20 +304,20 @@
     },
     "img": "https://imaj.emlakjet.com/resize/320/0/listing/19551293/32762E9FE637244983FB8A68F7C9D45E19551293.jpg",
     "url": "https://www.emlakjet.com/ilan/firsat-51-denize-yakin-konumda-tripleks-villa-19551293",
-    "lat": 37.3562,
-    "lng": 27.26535
+    "lat": 37.371,
+    "lng": 27.26015
   },
   {
     "id": "19542865",
     "cat": "sale",
-    "mahalle": "hisar",
+    "mahalle": "camlik",
     "price": 4000000,
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Hisar Mah.2+1 Sıfır Daire",
-      "en": "2+1 Apartment in Hisar — For Sale",
-      "de": "2+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
+      "tr": "Çamlık Mah.yatırımlık 2+1 Satılık Daire",
+      "en": "2+1 Apartment in Camlik — For Sale",
+      "de": "2+1-Zimmer-Wohnung in Camlik — Zu verkaufen"
     },
     "meta": {
       "tr": "2+1 · 70 m² · 2. kat",
@@ -304,8 +326,8 @@
     },
     "img": "https://imaj.emlakjet.com/resize/320/0/listing/19542865/039270E5204054CF51741061852D1DC819542865.jpg",
     "url": "https://www.emlakjet.com/ilan/camlik-mah-yatirimlik-21-satilik-daire-19542865",
-    "lat": 37.3834,
-    "lng": 27.2563
+    "lat": 37.3568,
+    "lng": 27.266
   },
   {
     "id": "19542268",
@@ -315,7 +337,7 @@
     "currency": "₺",
     "period": null,
     "title": {
-      "tr": "Hisar Mah 21 Sifir Daire",
+      "tr": "Hisar Mah.2+1 Sıfır Daire",
       "en": "2+1 Apartment in Hisar — For Sale",
       "de": "2+1-Zimmer-Wohnung in Hisar — Zu verkaufen"
     },
